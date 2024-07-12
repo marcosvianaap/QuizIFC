@@ -1,0 +1,49 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz de Cursos</title>
+</head>
+<body>
+    <h1>Quiz de Cursos</h1>
+    <form id="quizForm">
+        <label for="turno">Turno:</label>
+        <input type="text" id="turno" name="turno"><br><br>
+        <label for="nivel">Nível:</label>
+        <input type="text" id="nivel" name="nivel"><br><br>
+        <label for="localidade">Localidade:</label>
+        <input type="text" id="localidade" name="localidade"><br><br>
+        <input type="submit" value="Buscar">
+    </form>
+
+    <div id="resultados"></div>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var turno = document.getElementById('turno').value;
+            var nivel = document.getElementById('nivel').value;
+            var localidade = document.getElementById('localidade').value;
+
+            fetch('/quiz', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ turno: turno, nivel: nivel, localidade: localidade })
+            })
+            .then(response => response.json())
+            .then(data => {
+                var resultados = document.getElementById('resultados');
+                resultados.innerHTML = '';
+                data.forEach(curso => {
+                    var div = document.createElement('div');
+                    div.textContent = curso.nome;
+                    resultados.appendChild(div);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
