@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos EAD</title>
+</head>
+<body>
+    <h1>Cursos EAD Disponíveis</h1>
+    <ul>
+        {% for curso in cursos %}
+            <li>{{ curso.Curso }}</li>
+        {% else %}
+            <li>Nenhum curso EAD disponível.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,159 @@
+1 - Criar o banco de dados (se ainda não existir):
+    sqlite3 IFC.db;
+
+2 - Selecione o banco de dados:
+    .open IFC.db;
+
+
+CREATE TABLE IFC (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Curso TEXT NOT NULL,
+    Turno TEXT NOT NULL,
+    Campus TEXT NOT NULL,
+    Modalidade TEXT NOT NULL,
+    Região TEXT NOT NULL,
+    Área_Temática TEXT NOT NULL,
+    Ação_Afirmativa TEXT NOT NULL,
+    Site TEXT NOT NULL
+);
+
+
+INSERT INTO IFC (Curso, Turno, Modalidade, Campus, Região, Área_Temática, Ação_Afirmativa, Site) VALUES
+('Agropecuária', 'Integral', 'Técnico Integrado', 'Abelardo Luz', 'Oeste', 'Ciências Agrárias', 'Agricultura Familiar, Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://abelardoluz.ifc.edu.br/'),
+('Agropecuária', 'Integral', 'Técnico Integrado', 'Araquari', 'Norte', 'Ciências Agrárias', 'Agricultura Familiar, Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://agropecuaria.araquari.ifc.edu.br/'),
+('Informática', 'Integral', 'Técnico Integrado', 'Araquari', 'Norte', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://informatica.araquari.ifc.edu.br/'),
+('Química', 'Integral', 'Técnico Integrado', 'Araquari', 'Norte', 'Ciências Exatas e da Terra', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://quimica.araquari.ifc.edu.br/'),
+('Eletromecânica', 'Integral', 'Técnico Integrado', 'Blumenau', 'Vale do Itajaí', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://eletrointegrado.blumenau.ifc.edu.br/'),
+('Informática', 'Integral', 'Técnico Integrado', 'Blumenau', 'Vale do Itajaí', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://informatica.blumenau.ifc.edu.br/'),
+('Mecatrônica', 'Integral', 'Técnico Integrado', 'Blumenau', 'Vale do Itajaí', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://mecatronica.blumenau.ifc.edu.br/'),
+('Informática', 'Integral', 'Técnico Integrado', 'Brusque', 'Vale do Itajaí', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://brusque.antigo.ifc.edu.br/tecnico-em-informatica-integrado-ao-ensino-medio/'),
+('Química', 'Integral', 'Técnico Integrado', 'Brusque', 'Vale do Itajaí', 'Ciências Exatas e da Terra', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://brusque.antigo.ifc.edu.br/tecnico-em-quimica-integrado-ao-ensino-medio/'),
+('Agropecuária', 'Integral', 'Técnico Integrado', 'Camboriú', 'Vale do Itajaí', 'Ciências Agrárias', 'Agricultura Familiar, Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://www.camboriu.ifc.edu.br/cursos-tecnicos/integrado-ao-ensino-medio/agropecuaria/'),
+('Controle Ambiental', 'Integral', 'Técnico Integrado', 'Camboriú', 'Vale do Itajaí', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://www.camboriu.ifc.edu.br/cursos-tecnicos/integrado-ao-ensino-medio/controle-ambiental/'),
+('Hospedagem', 'Integral', 'Técnico Integrado', 'Camboriú', 'Vale do Itajaí', 'Ciências Sociais Aplicadas', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://www.camboriu.ifc.edu.br/cursos-tecnicos/integrado-ao-ensino-medio/hospedagem/'),
+('Informática', 'Integral', 'Técnico Integrado', 'Camboriú', 'Vale do Itajaí', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://www.camboriu.ifc.edu.br/cursos-tecnicos/integrado-ao-ensino-medio/informatica/'),
+('Agropecuária', 'Integral', 'Técnico Integrado', 'Concórdia', 'Oeste', 'Ciências Agrárias', 'Agricultura Familiar, Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://tecnico-agropecuaria.concordia.ifc.edu.br/'),
+('Alimentos', 'Integral', 'Técnico Integrado', 'Concórdia', 'Oeste', 'Ciências Agrárias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://tecnico-alimentos.concordia.ifc.edu.br/'),
+('Informática para Internet', 'Integral', 'Técnico Integrado', 'Concórdia', 'Oeste', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://tecnico-informatica.concordia.ifc.edu.br/'),
+('Informática', 'Integral', 'Técnico Integrado', 'Fraiburgo', 'Oeste', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://informatica.fraiburgo.ifc.edu.br/'),
+('Administração', 'Integral', 'Técnico Integrado', 'Ibirama', 'Vale do Itajaí', 'Ciências Sociais Aplicadas', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://ibirama.ifc.edu.br/tecnico-em-administracao-integrado-ao-ensino-medio/'),
+('Informática', 'Integral', 'Técnico Integrado', 'Ibirama', 'Vale do Itajaí', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://ibirama.ifc.edu.br/tecnico-em-informatica-integrado-ao-ensino-medio/'),
+
+INSERT INTO IFC (Curso, Turno, Modalidade, Campus, Região, Área_Temática, Ação_Afirmativa, Site) VALUES
+('Vestuário', 'Integral', 'Técnico Integrado', 'Ibirama', 'Vale do Itajaí', 'Ciências Sociais Aplicadas', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://ibirama.ifc.edu.br/tecnico-em-vestuario-integrado-ao-ensino-medio/'),
+('Automação Industrial', 'Integral', 'Técnico Integrado', 'Luzerna', 'Oeste', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://luzerna.ifc.edu.br/emitai/'),
+('Segurança do Trabalho', 'Integral', 'Técnico Integrado', 'Luzerna', 'Oeste', 'Ciências Sociais Aplicadas', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://luzerna.ifc.edu.br/emitst/'),
+('Mecânica', 'Integral', 'Técnico Integrado', 'Luzerna', 'Oeste', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://luzerna.ifc.edu.br/emimec/'),
+('Agroecologia', 'Integral', 'Técnico Integrado', 'Rio do Sul', 'Vale do Itajaí', 'Ciências Agrárias', 'Agricultura Familiar, Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://riodosul.ifc.edu.br/cursos/curso-tecnico-em-agroecologia-integrado-ao-ensino-medio/'),
+('Agropecuária', 'Integral', 'Técnico Integrado', 'Rio do Sul', 'Vale do Itajaí', 'Ciências Agrárias', 'Agricultura Familiar, Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://riodosul.ifc.edu.br/'),
+('Informática', 'Integral', 'Técnico Integrado', 'Rio do Sul', 'Vale do Itajaí', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://riodosul.ifc.edu.br/'),
+('Agropecuária', 'Integral', 'Técnico Integrado', 'Santa Rosa do Sul', 'Sul', 'Ciências Agrárias', 'Agricultura Familiar, Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://agropecuaria.santarosadosul.ifc.edu.br/'),
+('Automação Industrial', 'Integral', 'Técnico Integrado', 'São Bento do Sul', 'Norte', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://saobentodosul.ifc.edu.br/tai/'),
+('Informática', 'Integral', 'Técnico Integrado', 'São Bento do Sul', 'Norte', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://saobentodosul.ifc.edu.br/tin/'),
+
+INSERT INTO IFC (Curso, Turno, Modalidade, Campus, Região, Área_Temática, Ação_Afirmativa, Site) VALUES
+('Segurança do Trabalho', 'Integral', 'Técnico Integrado', 'São Bento do Sul', 'Norte', 'Ciências Sociais Aplicadas', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://saobentodosul.ifc.edu.br/tst/'),
+('Administração', 'Integral', 'Técnico Integrado', 'São Francisco do Sul', 'Norte', 'Ciências Sociais Aplicadas', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://https/ctiadministracao.saofrancisco.ifc.edu.br/'),
+('Automação Industrial', 'Integral', 'Técnico Integrado', 'São Francisco do Sul', 'Norte', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://ctiautomacao.saofrancisco.ifc.edu.br/'),
+('Guia de Turismo', 'Integral', 'Técnico Integrado', 'São Francisco do Sul', 'Norte', 'Ciências Sociais Aplicadas', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://ctiguiadeturismo.saofrancisco.ifc.edu.br/'),
+('Hospedagem', 'Integral', 'Técnico Integrado', 'Sombrio', 'Sul', 'Ciências Sociais Aplicadas', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://hospedagem.sombrio.ifc.edu.br/'),
+('Informática', 'Integral', 'Técnico Integrado', 'Sombrio', 'Sul', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://hospedagem.sombrio.ifc.edu.br/'),
+('Agropecuária', 'Integral', 'Técnico Integrado', 'Videira', 'Oeste', 'Ciências Agrárias', 'Agricultura Familiar, Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://videira.ifc.edu.br/tecnico-agropecuaria/'),
+('Eletroeletrônica', 'Integral', 'Técnico Integrado', 'Videira', 'Oeste', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://videira.ifc.edu.br/tecnico-eletroeletronica/'),
+('Informática', 'Integral', 'Técnico Integrado', 'Videira', 'Oeste', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://videira.ifc.edu.br/tecnico-eletroeletronica/'),
+('Agrimensura', 'Noite', 'Técnico Subsequente', 'Araquari', 'Norte', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://agrimensura.araquari.ifc.edu.br/'),
+
+INSERT INTO IFC (Curso, Turno, Modalidade, Campus, Região, Área_Temática, Ação_Afirmativa, Site) VALUES
+('Mecânica', 'Noite', 'Técnico Subsequente', 'Blumenau', 'Vale do Itajaí', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://mecanica.blumenau.ifc.edu.br/'),
+('Cervejaria', 'Noite', 'Técnico Subsequente', 'Brusque', 'Vale do Itajaí', 'Ciências Agrárias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://brusque.ifc.edu.br/cursos/217-2/'),
+('Defesa civil', 'Noite', 'Técnico Subsequente', 'Camboriú', 'Vale do Itajaí', 'Multidisciplinar', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://www.camboriu.ifc.edu.br/cursos-tecnicos/subsequente-ao-ensino-medio/defesa-civil/'),
+('Defesa civil', 'EAD', 'Técnico Subsequente', 'Camboriú', 'Vale do Itajaí', 'Multidisciplinar', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://www.camboriu.ifc.edu.br/subsequente-ao-ensino-medio-defesa-civil-ead/'),
+('Segurança do Trabalho', 'Tarde', 'Técnico Subsequente', 'Camboriú', 'Vale do Itajaí', 'Multidisciplinar', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://ingresso.ifc.edu.br/guia-de-cursos/'),
+('Segurança do Trabalho', 'Noite', 'Técnico Subsequente', 'Camboriú', 'Vale do Itajaí', 'Multidisciplinar', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://ingresso.ifc.edu.br/guia-de-cursos/'),
+('Transações imobiliárias', 'Noite', 'Técnico Subsequente', 'Camboriú', 'Vale do Itajaí', 'Ciências Sociais Aplicadas', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://www.camboriu.ifc.edu.br/cursos-tecnicos/subsequente-ao-ensino-medio/transacoes-imobiliarias/'),
+('Administração', 'Noite', 'Técnico Subsequente', 'Fraiburgo', 'Oeste', 'Ciências Sociais Aplicadas', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://adm.fraiburgo.ifc.edu.br/'),
+('Edificações', 'Noite', 'Técnico Subsequente', 'Fraiburgo', 'Oeste', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://edificacoes.fraiburgo.ifc.edu.br/'),
+('Segurança do Trabalho', 'Noite', 'Técnico Subsequente', 'Fraiburgo', 'Oeste', 'Multidisciplinar', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://seguranca.fraiburgo.ifc.edu.br/'),
+
+INSERT INTO IFC (Curso, Turno, Modalidade, Campus, Região, Área_Temática, Ação_Afirmativa, Site) VALUES
+('Automação Industrial', 'Noite', 'Técnico Subsequente', 'Luzerna', 'Oeste', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://luzerna.ifc.edu.br/tecnicoautomacao/'),
+('Mecânica', 'Noite', 'Técnico Subsequente', 'Luzerna', 'Oeste', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://luzerna.ifc.edu.br/tecnicomecanica/'),
+('Agrimensura', 'Integral', 'Técnico Subsequente', 'Rio do Sul', 'Vale do Itajai', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://ingresso.ifc.edu.br/guia-de-cursos/'),
+('Agroecologia', 'Integral', 'Técnico Subsequente', 'Rio do Sul', 'Vale do Itajai', 'Ciências Agrárias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://ingresso.ifc.edu.br/guia-de-cursos/'),
+('Agropecuária', 'Noite', 'Técnico Subsequente', 'Rio do Sul', 'Vale do Itajai', 'Ciências Agrárias', 'Agricultura Familiar, Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://ingresso.ifc.edu.br/guia-de-cursos/'),
+('Administração', 'Noite', 'Técnico Subsequente', 'São Francisco do Sul', 'Norte', 'Ciências Sociais Aplicadas', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://ctsadministracao.saofrancisco.ifc.edu.br/'),
+('Automação Industrial', 'Noite', 'Técnico Subsequente', 'São Francisco do Sul', 'Norte', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://ctsautomacao.saofrancisco.ifc.edu.br/'),
+('Eletrotécnica', 'Noite', 'Técnico Subsequente', 'Videira', 'Oeste', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://videira.ifc.edu.br/tecnico-eletrotecnica/'),
+('Segurança do Trabalho', 'Noite', 'Técnico Subsequente', 'Videira', 'Oeste', 'Multidisciplinar', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://videira.ifc.edu.br/tecnico-seguranca-do-trabalho/'),
+('Pedagogia - Ênfase em Educação do Campo', 'Integral', 'Superior Licenciatura', 'Abelardo Luz', 'Oeste', 'Ciências Humanas', 'Docente da Rede Pública de Ensino', 'https://pedagogia.abelardoluz.ifc.edu.br/'),
+
+INSERT INTO IFC (Curso, Turno, Modalidade, Campus, Região, Área_Temática, Ação_Afirmativa, Site) VALUES
+('Agronomia', 'Integral', 'Superior Bacharelado', 'Araquari', 'Norte', 'Ciências Agrárias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://agronomia.araquari.ifc.edu.br/'),
+('Medicina Veterinária', 'Integral', 'Superior Bacharelado', 'Araquari', 'Norte', 'Ciências Agrárias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://agronomia.araquari.ifc.edu.br/'),
+('Sistemas da Informação', 'Manhã', 'Superior Bacharelado', 'Araquari', 'Norte', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://bsi.araquari.ifc.edu.br/'),
+('Ciências agrícolas', 'Noite', 'Superior Licenciatura', 'Araquari', 'Norte', 'Ciências Agrárias', 'Docente da Rede Pública de Ensino', 'https://lica.araquari.ifc.edu.br/'),
+('Química', 'Noite', 'Superior Licenciatura', 'Araquari', 'Norte', 'Ciências Exatas e da Terra', 'Docente da Rede Pública de Ensino', 'https://liqui.araquari.ifc.edu.br/'),
+('Redes de Computadores', 'Noite', 'Superior Tecnologia', 'Araquari', 'Norte', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://redes.araquari.ifc.edu.br/'),
+('Pedagogia', 'Noite', 'Superior Licenciatura', 'Blumenau', 'Vale do Itajaí', 'Ciências Humanas', 'Docente da Rede Pública de Ensino', 'https://pedagogia.blumenau.ifc.edu.br/'),
+('Engenharia Elétrica', 'Noite', 'Superior Bacharelado', 'Blumenau', 'Vale do Itajaí', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://engenhariaeletrica.blumenau.ifc.edu.br/'),
+('Tecnologia em Análise e Desenvolvimento de Sistemas', 'Noite', 'Superior Tecnologia', 'Blumenau', 'Vale do Itajaí', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://tads.blumenau.ifc.edu.br/'),
+('Ciência da Computação', 'Integral', 'Superior Bacharelado', 'Blumenau', 'Vale do Itajaí', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://bcc.blumenau.ifc.edu.br/'),
+
+INSERT INTO IFC (Curso, Turno, Modalidade, Campus, Região, Área_Temática, Ação_Afirmativa, Site) VALUES
+('Química', 'Noite', 'Superior Licenciatura', 'Brusque', 'Vale do Itajaí', 'Ciências Exatas e da Terra', 'Docente da Rede Pública de Ensino', 'https://bcc.blumenau.ifc.edu.br/'),
+('Redes de Computadores', 'Noite', 'Superior Tecnologia', 'Brusque', 'Vale do Itajaí', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://brusque.ifc.edu.br/cursos/tecnologia-em-redes-de-computadores/'),
+('Agronomia', 'Integral', 'Superior Bacharelado', 'Camboriú', 'Vale do Itajaí', 'Ciências Agrárias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://www.camboriu.ifc.edu.br/bacharelado-em-agronomia-2/'),
+('Sistemas da Informação', 'Manhã', 'Superior Bacharelado', 'Camboriú', 'Vale do Itajaí', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://www.camboriu.ifc.edu.br/cursos-superiores/bacharelado-em-sistemas-de-informacao/'),
+('Matemática', 'Noite', 'Superior Licenciatura', 'Camboriú', 'Vale do Itajaí', 'Ciências Exatas e da Terra', 'Docente da Rede Pública de Ensino', 'http://www.camboriu.ifc.edu.br/cursos-superiores/licenciatura-em-matematica/'),
+('Pedagogia', 'Noite', 'Superior Licenciatura', 'Camboriú', 'Vale do Itajaí', 'Ciências Humanas', 'Docente da Rede Pública de Ensino', 'http://www.camboriu.ifc.edu.br/cursos-superiores/licenciatura-em-pedagogia/'),
+('Negócios Imobiliários', 'Noite', 'Superior Tecnologia', 'Camboriú', 'Vale do Itajaí', 'Ciências Sociais Aplicadas', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://www.camboriu.ifc.edu.br/cursos-superiores/tecnologo-em-negocios-imobiliarios/'),
+('Sistemas para Internet', 'EAD', 'Superior Tecnologia', 'Camboriú', 'Vale do Itajaí', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://www.camboriu.ifc.edu.br/tecnologia-em-sistemas-para-internet-ead/'),
+('Agronomia', 'Integral', 'Superior Bacharelado', 'Concórdia', 'Oeste', 'Ciências Agrárias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://agronomia.concordia.ifc.edu.br/'),
+('Engenharia de Alimentos', 'Integral', 'Superior Bacharelado', 'Concórdia', 'Oeste', 'Ciências Agrárias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://engenharia-alimentos.concordia.ifc.edu.br/'),
+
+INSERT INTO IFC (Curso, Turno, Modalidade, Campus, Região, Área_Temática, Ação_Afirmativa, Site) VALUES
+('Medicina Veterinária', 'Integral', 'Superior Bacharelado', 'Concórdia', 'Oeste', 'Ciências Agrárias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://medicina-veterinaria.concordia.ifc.edu.br/'),
+('Física', 'Noite', 'Superior Licenciatura', 'Concórdia', 'Oeste', 'Ciências Exatas e da Terra', 'Docente da Rede Pública de Ensino', 'https://licenciatura-fisica.concordia.ifc.edu.br/'),
+('Matemática', 'Noite', 'Superior Licenciatura', 'Concórdia', 'Oeste', 'Ciências Exatas e da Terra', 'Docente da Rede Pública de Ensino', 'https://licenciatura-matematica.concordia.ifc.edu.br/'),
+('Análise e Desenvolvimento de Sistemas', 'Noite', 'Superior Tecnologia', 'Fraiburgo', 'Oeste', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://ads.fraiburgo.ifc.edu.br/'),
+('Design de Moda', 'Noite', 'Superior Tecnologia', 'Ibirama', 'Vale do Itajaí', 'Ciências Sociais Aplicadas', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://ibirama.ifc.edu.br/tecnologia-em-design-de-moda/'),
+('Engenharia de Controle e Automação', 'Integral', 'Superior Bacharelado', 'Luzerna', 'Oeste', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://luzerna.ifc.edu.br/bach-autom/'),
+('Engenharia Mecânica', 'Integral', 'Superior Bacharelado', 'Luzerna', 'Oeste', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://luzerna.ifc.edu.br/engenharia-mecanica/'),
+('Agronomia', 'Integral', 'Superior Bacharelado', 'Rio do Sul', 'Vale do Itajaí', 'Ciências Agrárias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://ingresso.ifc.edu.br/guia-de-cursos/'),
+('Ciência da Computação', 'Integral', 'Superior Bacharelado', 'Rio do Sul', 'Vale do Itajaí', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://ingresso.ifc.edu.br/guia-de-cursos/'),
+
+INSERT INTO IFC (Curso, Turno, Modalidade, Campus, Região, Área_Temática, Ação_Afirmativa, Site) VALUES
+('Engenharia Mecatrônica', 'Integral', 'Superior Bacharelado', 'Rio do Sul', 'Vale do Itajaí', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://ingresso.ifc.edu.br/guia-de-cursos/'),
+('Física', 'Noite', 'Superior Licenciatura', 'Rio do Sul', 'Vale do Itajaí', 'Ciências Exatas e da Terra', 'Docente da Rede Pública de Ensino', 'https://ingresso.ifc.edu.br/guia-de-cursos/'),
+('Matemática', 'Noite', 'Superior Licenciatura', 'Rio do Sul', 'Vale do Itajaí', 'Ciências Exatas e da Terra', 'Docente da Rede Pública de Ensino', 'https://ingresso.ifc.edu.br/guia-de-cursos/'),
+('Pedagogia', 'Noite', 'Superior Licenciatura', 'Rio do Sul', 'Vale do Itajaí', 'Ciências Humanas', 'Docente da Rede Pública de Ensino', 'https://ingresso.ifc.edu.br/guia-de-cursos/'),
+('Agronomia', 'Integral', 'Superior Bacharelado', 'Santa Rosa do Sul', 'Sul', 'Ciências Agrárias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://agronomia.santarosadosul.ifc.edu.br/'),
+('Zootecnia', 'Integral', 'Superior Bacharelado', 'Santa Rosa do Sul', 'Sul', 'Ciências Agrárias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://zootecnia.santarosadosul.ifc.edu.br/'),
+('Engenharia de Controle e Automação', 'Integral', 'Superior Bacharelado', 'São Bento do Sul', 'Norte', 'Ciências Agrárias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://saobentodosul.ifc.edu.br/eca/'),
+('Engenharia de Computação', 'Integral', 'Superior Bacharelado', 'São Bento do Sul', 'Norte', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://saobentodosul.ifc.edu.br/eco/'),
+('Engenharia Elétrica', 'Noite', 'Superior Bacharelado', 'São Francisco do Sul', 'Norte', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://engenhariaeletrica.saofrancisco.ifc.edu.br/'),
+('Logística', 'Noite', 'Superior Tecnologia', 'São Francisco do Sul', 'Norte', 'Ciências Sociais Aplicadas', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://logistica.saofrancisco.ifc.edu.br/'),
+
+INSERT INTO IFC (Curso, Turno, Modalidade, Campus, Região, Área_Temática, Ação_Afirmativa, Site) VALUES
+('Matemática', 'Noite', 'Superior Licenciatura', 'Sombrio', 'Sul', 'Ciências Exatas e da Terra', 'Docente da Rede Pública de Ensino', 'https://matematica.sombrio.ifc.edu.br/'),
+('Gestão de Turismo', 'Noite', 'Superior Tecnologia', 'Sombrio', 'Sul', 'Ciências Sociais Aplicadas', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://turismo.sombrio.ifc.edu.br/'),
+('Redes de Computadores', 'Noite', 'Superior Tecnologia', 'Sombrio', 'Sul', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://redes.sombrio.ifc.edu.br/'),
+('Agronomia', 'Matutino', 'Superior Bacharelado', 'Videira', 'Oeste', 'Ciências Agrárias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'https://videira.ifc.edu.br/agronomia/'),
+('Ciência da Computação', 'Manhã', 'Superior Bacharelado', 'Videira', 'Oeste', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://videira.ifc.edu.br/ciencia-da-computacao'),
+('Engenharia Elétrica', 'Noite', 'Superior Bacharelado', 'Videira', 'Oeste', 'Engenharias e Tecnologias', 'Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda', 'http://videira.ifc.edu.br/engenharia-eletrica/'),
+('Pedagogia', 'Noite', 'Superior Licenciatura', 'Videira', 'Oeste', 'Ciências Humanas', 'Docente da Rede Pública de Ensino', 'http://videira.ifc.edu.br/pedagogia'),
+('Pós-Graduação em Treinador e Instrutor de Cães-Guias', 'Integral', 'Pós-graduação lato sensu', 'Camboriú', 'Vale do Itajaí', 'Ciências Sociais Aplicadas', 'Sem Ações Afirmativas', 'http://www.camboriu.antigo.ifc.edu.br/pos-graduacao/treinador-e-instrutor-de-caes-guia/'),
+('Pós-Graduação em Educação Matemática', 'Noturno/Integral', 'Pós-graduação lato sensu', 'Concórdia', 'Oeste', 'Ciências Humanas', 'Sem Ações Afirmativas', 'http://eem.concordia.antigo.ifc.edu.br/'),
+
+INSERT INTO IFC (Curso, Turno, Modalidade, Campus, Região, Área_Temática, Ação_Afirmativa, Site) VALUES
+('Pós-Graduação em Educação e Interdisciplinaridade', 'Noturno/Integral', 'Pós-graduação lato sensu', 'Ibirama', 'Vale do Itajaí', 'Multidisciplinar', 'Sem Ações Afirmativas', 'http://ibirama.antigo.ifc.edu.br/cursos-pos-graduacao-em-educacao-interdisciplinar/'),
+('Pós-Graduação Moda', 'Noturno/Integral', 'Pós-graduação lato sensu', 'Ibirama', 'Vale do Itajaí', 'Ciências Sociais Aplicadas', 'Sem Ações Afirmativas', 'http://ibirama.antigo.ifc.edu.br/pos-graduacao-lato-sensu-em-nivel-de-especializacao-em-moda/'),
+('Pós-Graduação em Agronomia: Sistemas Agrícolas Regionais', 'Noturno', 'Pós-graduação lato sensu', 'Rio do Sul', 'Vale do Itajaí', 'Ciências Agrárias', 'Sem Ações Afirmativas', 'http://www.ifc-riodosul.edu.br/site/'),
+('Pós-Graduação em Educação', 'Noturno', 'Pós-graduação lato sensu', 'Videira', 'Oeste', 'Ciências Humanas', 'Sem Ações Afirmativas', 'http://videira.antigo.ifc.edu.br/pos-educacao/'),
+('Mestrado Profissional em Tecnologia e Ambiente', 'Integral', 'Pós-graduação Stricto Sensu', 'Araquari', 'Norte', 'Ciências Agrárias', 'Sem Ações Afirmativas', 'https://ppgta.ifc.edu.br/'),
+('Mestrado Profissional em Produção e Sanidade Animal', 'Integral', 'Pós-graduação Stricto Sensu', 'Araquari/Concórdia', 'Norte', 'Ciências Agrárias', 'Sem Ações Afirmativas', 'https://ppgpsa.ifc.edu.br/'),
+('Mestrado Profissional em Produção e Sanidade Animal', 'Integral', 'Pós-graduação Stricto Sensu', 'Concórdia/Araquari', 'Oeste', 'Ciências Agrárias', 'Sem Ações Afirmativas', 'https://ppgpsa.ifc.edu.br/'),
+('Mestrado Profissional em Educação Profissional e Tecnológica', 'Integral', 'Pós-graduação Stricto Sensu', 'Blumenau', 'Vale do Itajaí', 'Ciências Humanas', 'Sem Ações Afirmativas', 'https://profept.ifc.edu.br/'),
+('Mestrado Profissional em Ensino de Geografia', 'Integral', 'Pós-graduação Stricto Sensu', 'Brusque', 'Vale do Itajaí', 'Ciências Humanas', 'Sem Ações Afirmativas', 'https://ensino.ifc.edu.br/cursos-de-pos-graduacao-stricto-sensu/'),
+('Mestrado Acadêmico em Educação', 'Integral', 'Pós-graduação Stricto Sensu', 'Camboriú', 'Vale do Itajaí', 'Ciências Humanas', 'Sem Ações Afirmativas', 'http://ppge.ifc.edu.br/');
+
