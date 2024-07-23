@@ -1,6 +1,11 @@
-#app/models.py
+# run
+from flask import Flask, render_template, redirect, request, flash
+from flask_sqlalchemy import SQLAlchemy
 
-from . import db
+app = Flask(__name__)
+app.secret_key = 'your_secret_key_here'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///IFC.db'
+db = SQLAlchemy(app)
 
 class IFC(db.Model):
     __tablename__ = 'IFC'
@@ -15,5 +20,11 @@ class IFC(db.Model):
     Ação_Afirmativa = db.Column(db.String, nullable=False)
     Site = db.Column(db.String, nullable=False)
 
-    def __repr__(self):
-        return f'<IFC {self.Curso}>'
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
