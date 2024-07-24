@@ -25,6 +25,15 @@ def home():
     return render_template('index.html')
 
 
+
+@app.route('/situacao')
+def tela_dois():
+    # Consulta ao banco de dados para buscar os dados que deseja exibir na tela dois
+    cursos = IFC.query.all()
+    
+    # Renderiza o template da tela dois com os dados dos cursos
+    return render_template('tela_dois.html', cursos=cursos)
+
 if __name__ == '__main__':
     app.run(debug=True)
 

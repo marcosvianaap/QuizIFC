@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/bootstrap/js/bootstrap.js">
+    <link rel="stylesheet" href="../static/tela_dois.css">
+    <title>Tela Dois</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Topo da tela com a imagem -->
+        <div class="top-section-two">
+            <img src="../static/img/tela2/cima.png" alt="logo de inicio">
+        </div>
+
+        <!-- Conteúdo Dinâmico da Tela -->
+        <div class="content">
+            <div id="title">
+                <h6>Qual situação melhor o(a) representa?</h6>
+            </div>
+            <form action="/processar_resposta" method="POST">
+                <ul class="opcoes">
+                    <li>
+                        <input type="radio" id="opcao1" name="situacao" value="nao_concluiu_fundamental">
+                        <label for="opcao1">Não conclui o ensino fundamental</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="opcao2" name="situacao" value="concluiu_fundamental">
+                        <label for="opcao2">Já conclui ou estou finalizando o ensino fundamental</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="opcao3" name="situacao" value="nao_concluiu_medio">
+                        <label for="opcao3">Não conclui o ensino médio</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="opcao4" name="situacao" value="18_anos_nao_concluiu_medio">
+                        <label for="opcao4">Tenho 18 anos ou mais e não conclui o ensino médio</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="opcao5" name="situacao" value="cursando_medio_outra_instituicao">
+                        <label for="opcao5">Estou cursando o ensino médio em outra instituição</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="opcao6" name="situacao" value="concluiu_medio">
+                        <label for="opcao6">Já conclui ou estou finalizando o ensino médio</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="opcao7" name="situacao" value="concluiu_graduacao">
+                        <label for="opcao7">Já conclui minha graduação</label>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <script src="../static/script.js"></script> <!-- Referencia para arquivos js -->
+    <script src="../static/js/jquery-3.6.4.js"></script> <!-- Chamada de jQuery -->  
+</body>
+</html>
