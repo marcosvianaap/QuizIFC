@@ -1,0 +1,39 @@
+/* Estilos específicos para dispositivos móveis com largura máxima de 320px e altura máxima de 578px */
+@media (max-width: 320px) and (max-height: 578px) {
+    
+    /* Estilos para a Tela 1 */
+
+    body {
+        display: flex;                                  /* Define o layout do body como flexbox */
+        justify-content: center;                        /* Centraliza horizontalmente o conteúdo dentro do body */
+        align-items: center;                            /* Centraliza verticalmente o conteúdo dentro do body */
+        background-image: url('img/fundo_verde.png');   /* Define uma imagem de fundo para o body */
+        background-size: cover;                         /* Faz com que a imagem de fundo cubra todo o body */
+    }
+
+    .container {
+        width: 100%;                                    /* Define a largura da div container como 100% */
+        max-width: 100%;                                /* Impede que a largura exceda 100% */
+        padding: 0;                                     /* Remove o padding interno da div container */
+    }
+
+    .top-section img {
+        background: none;                               /* Remove qualquer background presente na imagem */
+        border: none;                                   /* Remove bordas da imagem */
+        width: 100%;                                    /* Define a largura da imagem como 100% do elemento pai */
+        height: auto;                                   /* Ajusta automaticamente a altura da imagem para manter a proporção */
+    }
+
+    .quiz-button {
+        background: none;                               /* Remove qualquer background do botão */
+        border: none;                                   /* Remove a borda do botão */
+    }
+
+    .quiz-button img {
+        padding-top: 15%;                               /* Adiciona um padding no topo da imagem do botão */
+        width: 70%;                                     /* Define a largura da imagem do botão como 70% do elemento pai */
+        height: auto;                                   /* Ajusta automaticamente a altura da imagem do botão para manter a proporção */
+        cursor: pointer;                                /* Muda o cursor para indicar que o elemento é clicável */
+    }
+
+}

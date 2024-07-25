@@ -24,8 +24,6 @@ class IFC(db.Model):
 def home():
     return render_template('index.html')
 
-
-
 @app.route('/situacao')
 def tela_dois():
     # Consulta ao banco de dados para buscar os dados que deseja exibir na tela dois
@@ -33,6 +31,14 @@ def tela_dois():
     
     # Renderiza o template da tela dois com os dados dos cursos
     return render_template('tela_dois.html', cursos=cursos)
+
+@app.route('/regiao', methods=['GET', 'POST'])
+def tela_tres():
+    return render_template('tela_tres.html')
+
+@app.route('/area', methods=['GET', 'POST'])
+def tela_quatro():
+    return render_template('tela_quatro.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -9,54 +9,50 @@
         <link rel="stylesheet" href="../static/style.css">
         <link rel="stylesheet" href="../static/tela_2-5.css">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
-        <title>Situação</title>
+        <title>Região</title>
     </head>
     <body>
         <div class="container">
             <!-- Topo da tela com a imagem -->
             <div class="top-section-two">
-                <img src="../static/img/tela2.png" alt="logo de inicio">
+                <img src="../static/img/tela3.png" alt="logo de inicio">
             </div>
 
             <!-- Conteúdo Dinâmico da Tela -->
             <div class="container">
                 <div class="content">
                     <div id="background">
-                        <h6 class="titulo">Qual situação melhor o(a) representa?</h6>
+                        <h6 class="titulo">Em qual região de Santa Catarina você prefere estudar?</h6>
                     </div>
                     <form action="/processar_resposta" method="POST">
                         <ul class="opcoes">
                             <li>      
                                 <input type="radio" id="opcao1" name="situacao" value="nao_concluiu_fundamental">
-                                <label  class="titulo" for="opcao1">Não conclui o ensino fundamental</label>                               
+                                <label  class="titulo" for="opcao1">Norte</label>                               
                             </li>
                             <li>      
                                 <input type="radio" id="opcao2" name="situacao" value="nao_concluiu_fundamental">
-                                <label  class="titulo" for="opcao2">Já concluí ou estou finalizando o ensino fundamental</label>                               
+                                <label  class="titulo" for="opcao2">Sul</label>                               
                             </li>
                             <li>      
                                 <input type="radio" id="opcao3" name="situacao" value="nao_concluiu_fundamental">
-                                <label  class="titulo" for="opcao3">Não concluío ensino médio</label>                               
+                                <label  class="titulo" for="opcao3">Oeste</label>                               
                             </li>
                             <li>      
                                 <input type="radio" id="opcao4" name="situacao" value="nao_concluiu_fundamental">
-                                <label  class="titulo" for="opcao4">Não concluí o ensino médio</label>                               
+                                <label  class="titulo" for="opcao4">Vale do Itajaí</label>                               
                             </li>
                             <li>      
                                 <input type="radio" id="opcao5" name="situacao" value="nao_concluiu_fundamental">
-                                <label  class="titulo" for="opcao5">Tenho 18 anos ou mais e não concluí o ensino médio</label>                               
+                                <label  class="titulo" for="opcao5">Grande Florianópolis</label>                               
                             </li>
                             <li>      
                                 <input type="radio" id="opcao6" name="situacao" value="nao_concluiu_fundamental">
-                                <label  class="titulo" for="opcao6">Estou cursando o ensino médio em outra instituição</label>                               
+                                <label  class="titulo" for="opcao6">Serrana</label>                               
                             </li>
                             <li>      
                                 <input type="radio" id="opcao7" name="situacao" value="nao_concluiu_fundamental">
-                                <label  class="titulo" for="opcao7">Já concluí ou estou finalizando o ensino médio</label>                               
-                            </li>
-                            <li>      
-                                <input type="radio" id="opcao8" name="situacao" value="nao_concluiu_fundamental">
-                                <label  class="titulo" for="opcao8">Já concluí minha graduação</label>                               
+                                <label  class="titulo" for="opcao7">Em qualquer região</label>                               
                             </li>
                         </ul>
                     </form>

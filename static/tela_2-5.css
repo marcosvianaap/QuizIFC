@@ -1,0 +1,92 @@
+/* Estilos específicos para dispositivos móveis com largura máxima de 320px e altura máxima de 578px */
+@media (max-width: 320px) and (max-height: 578px) {
+    /* Estilos para a Tela 2 */  
+    body {
+        display: flex;                                  /* Define o layout como flexbox */
+        justify-content: center;                        /* Centraliza horizontalmente o conteúdo */
+        align-items: center;                            /* Centraliza verticalmente o conteúdo */
+        background-image: url('img/fundo_verde.png');   /* Define a imagem de fundo */
+        background-size: cover;                         /* Cobre todo o espaço do body com a imagem */
+    }
+
+    .container {
+        width: 100%;                                    /* Largura total da tela */
+        max-width: 100%;                                /* Largura máxima para evitar overflow */
+        padding: 0;                                     /* Remove o espaçamento interno */
+    }
+
+    .top-section-two {
+        width: 100%;                                    /* Largura total da tela */
+        max-width: 100%;                                /* Largura máxima para evitar overflow */
+    }
+
+    .top-section-two img {
+        background: none;                               /* Remove qualquer fundo */
+        border: none;                                   /* Remove bordas */
+        width: 100%;                                    /* Largura total da tela */
+        height: auto;                                   /* Ajusta a altura automaticamente */
+    }
+
+    .content {
+        width: 90%;                                     /* Largura de 90% do container */
+        max-width: 300px;                               /* Largura máxima de 300px */
+        min-height: 200px;                              /* Altura mínima de 200px */
+        justify-content: center;                        /* Centraliza o conteúdo */
+        text-align: center;                             /* Centraliza o texto */
+        background-color: #fff;                       /* Fundo branco */
+        border-radius: 10px;                            /* Bordas arredondadas */
+        margin: 7px 20px auto;                          /* Margens ao redor do container */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);     /* Adiciona sombra ao redor do container */
+    }
+
+    #background {                                       /* Estilos para o fundo da seção superior */
+        background-color: #b22222;                    /* Cor de fundo vermelho */
+        border-top-left-radius: 10px;                   /* Borda superior esquerda arredondada */
+        border-top-right-radius: 10px;                  /* Borda superior direita arredondada */
+        margin-bottom: 0px;                             /* Remove a margem inferior */
+        padding: 5%;                                    /* Espaçamento interno de 5% */
+    }
+
+    #background h6 {                                    /* Estilos para o título */
+        margin: 0%;                                     /* Remove margens */
+        color: #fff;                                  /* Cor do texto branca */
+    } 
+
+    ul.opcoes { 
+        list-style: none;                               /* Remove marcadores de lista */
+        margin-bottom: 7px;                             /* Margem inferior */
+        padding: 7px 1px 7px;                           /* Espaçamento interno */
+    }
+
+    ul.opcoes li {  
+        font-size: 0.8em;                               /* Define o tamanho da fonte */
+        color: #444;                                  /* Cor do texto */
+        padding: 0%;                                    /* Remove espaçamento interno */
+        margin: 2px 3.3%;                               /* Margens entre os itens */
+        border: 2px solid #444;                       /* Borda de 2px ao redor dos itens */
+        border-radius: 25px;                            /* Bordas arredondadas */
+        display: flex;                                  /* Utilizando flexbox para layout */
+        align-items: center;                            /* Centraliza verticalmente o conteúdo */
+        justify-content: center;                        /* Centraliza horizontalmente o conteúdo */
+        flex: 1 0 auto;                                 /* Faz com que todos os itens tenham o mesmo tamanho */
+        min-height: 32px;                               /* Altura mínima para os itens */
+        box-sizing: border-box;                         /* Inclui o padding e border no cálculo do tamanho total */
+    }
+
+    ul.opcoes li input[type="radio"] {                  /* Estilos para o botão de escolha */
+        margin: 0px 3% 0px;                             /* Margens ao redor do botão */
+        transform: scale(1.7);                          /* Aumenta o tamanho do botão */
+    }
+
+    ul.opcoes li label {
+        margin-bottom: 0;                               /* Remove a margem inferior */
+        margin-left: 2%;                                /* Espaçamento à esquerda do label */
+        flex-grow: 1;                                   /* Faz com que o label ocupe todo o espaço disponível */
+        white-space: normal;                            /* Permite quebras de linha no texto */
+        overflow-wrap: break-word;                      /* Permite quebra de linha dentro de palavras longas */
+        text-align: left;                               /* Alinha o texto à esquerda */
+        line-height: 1;                                 /* Ajusta o espaçamento entre as linhas */
+    }
+}
+
+/*Pata o template 5*/
