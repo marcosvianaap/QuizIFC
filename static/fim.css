@@ -35,7 +35,7 @@
         text-align: center;                             /* Centraliza o texto */
         background-color: #fff;                       /* Fundo branco */
         border-radius: 10px;                            /* Bordas arredondadas */
-        margin: 8px 16px;                          /* Margens ao redor do container */
+        margin: 8px 16px;                               /* Margens ao redor do container */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);     /* Adiciona sombra ao redor do container */
     }
 
@@ -73,10 +73,6 @@
         box-sizing: border-box;                         /* Inclui o padding e border no cálculo do tamanho total */
     }
 
-    ul.opcoes li input[type="radio"] {                  /* Estilos para o botão de escolha */
-        margin: 0px 3% 0px;                             /* Margens ao redor do botão */
-        transform: scale(1.7);                          /* Aumenta o tamanho do botão */
-    }
 
     ul.opcoes li label {
         margin-bottom: 0;                               /* Remove a margem inferior */
@@ -91,23 +87,25 @@
 
 /* Ajustes para o botão "Conhecer Áreas de Estudo" 
 aplicado somente no template 4 "tela_quatro.html"*/
-#position_botton_area {
-    width: 43%;                                         /* Ajusta o tamanho da imagem */
+#position_botton_acoes {
+    width: 39%;                                         /* Ajusta o tamanho da imagem */
     position: absolute;                                 /* Posicionamento absoluto para controle preciso */
-    top: 15%;                                           /* Ajusta o posicionamento vertical */
+    top: 18%;                                           /* Ajusta o posicionamento vertical */
     left: 73%;                                          /* Alinha horizontalmente ao centro */
     transform: translate(-50%, -50%);                   /* Centraliza o botão */
     cursor: pointer;                                    /* Adiciona um ponteiro para interação */
 }
 
-/* Ajustes para o botão "Conhecer Áreas de Estudo" 
-aplicado somente no template 5 "tela_cinco.html"*/
-#position_botton_acoes {
-    width: 46%;                                         /* Ajusta o tamanho da imagem */
-    position: absolute;                                 /* Posicionamento absoluto para controle preciso */
-    top: 15%;                                           /* Ajusta o posicionamento vertical */
-    left: 30%;                                          /* Alinha horizontalmente ao centro */
-    transform: translate(-50%, -50%);                   /* Centraliza o botão */
-    cursor: pointer;                                    /* Adiciona um ponteiro para interação */
+ul.conteudo{
+    width: 100%;                                    /* Largura total da tela */
+    max-width: 100%;                                /* Largura máxima para evitar overflow */
+    color: #fff;
+    list-style: none;                                  /* Remove marcadores de lista */
+    text-decoration-line: underline;
+    margin: 0%;
+    padding-left: 30px;
+    li h5{
+        margin: 0%;
+        cursor: pointer;
+    }                                 
 }
-

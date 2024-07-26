@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="../static/bootstrap/js/bootstrap.js">
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="stylesheet" href="../static/fim.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
+        <title>Resultado</title>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Topo da tela com a imagem -->
+            <div class="top-section-two">
+                <img src="../static/img/tela6.png" alt="">
+                <a href="https://ingresso.ifc.edu.br/category/acoes-afirmativas/">
+                    <img id="position_botton_acoes" src="../static/img/reiniciar.png" alt="botão para conhecer as areas de estudo">
+                </a>
+            </div>
+            <!-- Conteúdo Dinâmico da Tela -->
+            <div class="container">
+                <div class="content">
+                    <div id="background">
+                        <h6 class="titulo">PRONTO!</h6>
+                        <h6 class="titulo">Conheça os cursos feitos para você:</h6>
+                    </div>
+                    <form action="/processar_resposta" method="POST">
+                        <ul class="opcoes">
+                            <li> 
+                                <label  class="titulo" for="opcao1"></label>                               
+                            </li>                              
+                        </ul>
+                    </form>
+                </div>
+            </div>
+            <ul class="conteudo">
+                <li>
+                    <h5>Quero me inscrever</h5>
+                </li>
+                <li>
+                    <h5>Quero conhecer outros cursos do IFC</h5>
+                </li>
+                <li>
+                    <h5>Quero conhecer os Campi</h5>
+                </li>
+                <li>
+                    <h5>Quero saber sobre Auxílios Estudantis</h5>
+                </li>
+                <li>
+                    <h5>Quero receber mais informações</h5>
+                </li>
+            </ul>  
+        </div>
+        <script src="../static/script.js"></script> <!-- Referencia para arquivos js -->
+        <script src="../static/js/jquery-3.6.4.js"></script> <!-- Chamada de jQuery -->  
+    </body>
+</html>

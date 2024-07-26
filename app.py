@@ -40,6 +40,10 @@ def tela_tres():
 def tela_quatro():
     return render_template('tela_quatro.html')
 
+@app.route('/ac', methods=['GET', 'POST'])
+def tela_cinco():
+    return render_template('tela_cinco.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
 
