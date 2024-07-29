@@ -9,50 +9,57 @@
         <link rel="stylesheet" href="../static/style.css">
         <link rel="stylesheet" href="../static/tela_2-5.css">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
-        <title>Região</title>
+        <title>Ações Afirmativas</title>
     </head>
     <body>
         <div class="container">
             <!-- Topo da tela com a imagem -->
             <div class="top-section-two">
-                <img src="../static/img/tela3.png" alt="logo de inicio">
+                <img src="../static/img/tela5.png" alt="logo de inicio">
+                <a href="https://ingresso.ifc.edu.br/guia-de-cursos/">
+                    <img id="position_botton_acoes" src="../static/img/acoesafirmativas.png" alt="botão para conhecer as areas de estudo">
+                </a>
             </div>
 
             <!-- Conteúdo Dinâmico da Tela -->
             <div class="container">
                 <div class="content">
                     <div id="background">
-                        <h6 class="titulo">Em qual região de Santa Catarina você prefere estudar?</h6>
+                        <h6 class="titulo">Você pretende se candidatar por meio de alguma ação afirmativa?</h6>
                     </div>
                     <form action="/processar_resposta" method="POST">
                         <ul class="opcoes">
                             <li>      
                                 <input type="radio" id="opcao1" name="situacao" value="nao_concluiu_fundamental">
-                                <label  class="titulo" for="opcao1">Norte</label>                               
+                                <label  class="titulo" for="opcao1">Sim, sou estudante/oriundo de escola pública</label>                               
                             </li>
                             <li>      
                                 <input type="radio" id="opcao2" name="situacao" value="nao_concluiu_fundamental">
-                                <label  class="titulo" for="opcao2">Sul</label>                               
+                                <label  class="titulo" for="opcao2">Sim, sou docente de escola pública</label>                               
                             </li>
                             <li>      
                                 <input type="radio" id="opcao3" name="situacao" value="nao_concluiu_fundamental">
-                                <label  class="titulo" for="opcao3">Oeste</label>                               
+                                <label  class="titulo" for="opcao3">Sim, sou negro(a)(preto, pardo)</label>                               
                             </li>
                             <li>      
                                 <input type="radio" id="opcao4" name="situacao" value="nao_concluiu_fundamental">
-                                <label  class="titulo" for="opcao4">Vale do Itajaí</label>                               
+                                <label  class="titulo" for="opcao4">Sim, sou indígena</label>                               
                             </li>
                             <li>      
                                 <input type="radio" id="opcao5" name="situacao" value="nao_concluiu_fundamental">
-                                <label  class="titulo" for="opcao5">Grande Florianópolis</label>                               
+                                <label  class="titulo" for="opcao5">Sim, sou pessoa com deficiência</label>                               
                             </li>
                             <li>      
                                 <input type="radio" id="opcao6" name="situacao" value="nao_concluiu_fundamental">
-                                <label  class="titulo" for="opcao6">Serrana</label>                               
+                                <label  class="titulo" for="opcao6">Sim, sou pessoa de baixa renda</label>                               
                             </li>
                             <li>      
                                 <input type="radio" id="opcao7" name="situacao" value="nao_concluiu_fundamental">
-                                <label  class="titulo" for="opcao7">Em qualquer região</label>                               
+                                <label  class="titulo" for="opcao7">Sim, sou agricultor(a) ou filho(a) de agricultores</label>                               
+                            </li>
+                            <li>      
+                                <input type="radio" id="opcao6" name="situacao" value="nao_concluiu_fundamental">
+                                <label  class="titulo" for="opcao6">Não, não pretendo</label>                               
                             </li>
                         </ul>
                     </form>

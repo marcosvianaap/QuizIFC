@@ -35,7 +35,7 @@
         text-align: center;                             /* Centraliza o texto */
         background-color: #fff;                       /* Fundo branco */
         border-radius: 10px;                            /* Bordas arredondadas */
-        margin: 8px 16px;                          /* Margens ao redor do container */
+        margin: 8px 16px;                               /* Margens ao redor do container */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);     /* Adiciona sombra ao redor do container */
     }
 
@@ -60,10 +60,10 @@
 
     ul.opcoes li {  
         font-size: 0.8em;                               /* Define o tamanho da fonte */
-        color: #444;                                  /* Cor do texto */
+        color: #868484;                               /* Cor do texto */
         padding: 0%;                                    /* Remove espaçamento interno */
         margin: 2px 3.3%;                               /* Margens entre os itens */
-        border: 2px solid #444;                       /* Borda de 2px ao redor dos itens */
+        border: 2px solid #868484;                    /* Borda de 2px ao redor dos itens */
         border-radius: 25px;                            /* Bordas arredondadas */
         display: flex;                                  /* Utilizando flexbox para layout */
         align-items: center;                            /* Centraliza verticalmente o conteúdo */
@@ -80,7 +80,6 @@
 
     ul.opcoes li label {
         margin-bottom: 0;                               /* Remove a margem inferior */
-        margin-left: 1%;                                /* Espaçamento à esquerda do label */
         flex-grow: 1;                                   /* Faz com que o label ocupe todo o espaço disponível */
         white-space: normal;                            /* Permite quebras de linha no texto */
         overflow-wrap: break-word;                      /* Permite quebra de linha dentro de palavras longas */

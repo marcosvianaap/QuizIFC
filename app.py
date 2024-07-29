@@ -30,19 +30,23 @@ def tela_dois():
     cursos = IFC.query.all()
     
     # Renderiza o template da tela dois com os dados dos cursos
-    return render_template('tela_dois.html', cursos=cursos)
+    return render_template('tela2.html', cursos=cursos)
 
 @app.route('/regiao', methods=['GET', 'POST'])
 def tela_tres():
-    return render_template('tela_tres.html')
+    return render_template('tela3.html')
 
 @app.route('/area', methods=['GET', 'POST'])
 def tela_quatro():
-    return render_template('tela_quatro.html')
+    return render_template('tela4.html')
 
 @app.route('/ac', methods=['GET', 'POST'])
+def resultado():
+    return render_template('tela5.html')
+
+@app.route('/resultado', methods=['GET', 'POST'])
 def tela_cinco():
-    return render_template('tela_cinco.html')
+    return render_template('tela6.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

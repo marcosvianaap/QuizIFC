@@ -86,7 +86,7 @@
 }
 
 /* Ajustes para o botão "Conhecer Áreas de Estudo" 
-aplicado somente no template 4 "tela_quatro.html"*/
+aplicado somente no template fim "fim.html"*/
 #position_botton_acoes {
     width: 39%;                                         /* Ajusta o tamanho da imagem */
     position: absolute;                                 /* Posicionamento absoluto para controle preciso */
