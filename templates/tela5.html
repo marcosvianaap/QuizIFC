@@ -17,7 +17,7 @@
             <div class="top-section-two">
                 <img src="../static/img/tela5.png" alt="logo de inicio">
                 <a href="https://ingresso.ifc.edu.br/guia-de-cursos/">
-                    <img id="position_botton_acoes" src="../static/img/acoesafirmativas.png" alt="botão para conhecer as areas de estudo">
+                    <img id="position_botton_acoes" src="../static/img/acoesafirmativas.png" alt="botão para conhecer as ações afirmativas">
                 </a>
             </div>
 
@@ -27,38 +27,38 @@
                     <div id="background">
                         <h6 class="titulo">Você pretende se candidatar por meio de alguma ação afirmativa?</h6>
                     </div>
-                    <form action="/processar_resposta" method="POST">
+                    <form id="acForm" action="/ac" method="POST">
                         <ul class="opcoes">
                             <li>      
-                                <input type="radio" id="opcao1" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao1" name="situacao" value="Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao1">Sim, sou estudante/oriundo de escola pública</label>                               
                             </li>
                             <li>      
-                                <input type="radio" id="opcao2" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao2" name="situacao" value="nao_concluiu_fundamental" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao2">Sim, sou docente de escola pública</label>                               
                             </li>
                             <li>      
-                                <input type="radio" id="opcao3" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao3" name="situacao" value="Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao3">Sim, sou negro(a)(preto, pardo)</label>                               
                             </li>
                             <li>      
-                                <input type="radio" id="opcao4" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao4" name="situacao" value="Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao4">Sim, sou indígena</label>                               
                             </li>
                             <li>      
-                                <input type="radio" id="opcao5" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao5" name="situacao" value="Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao5">Sim, sou pessoa com deficiência</label>                               
                             </li>
                             <li>      
-                                <input type="radio" id="opcao6" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao6" name="situacao" value="Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao6">Sim, sou pessoa de baixa renda</label>                               
                             </li>
                             <li>      
-                                <input type="radio" id="opcao7" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao7" name="situacao" value="Agricultura Familiar, Escola pública, Negros (pretos e pardos), Quilombola, Indígena, Baixa Renda" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao7">Sim, sou agricultor(a) ou filho(a) de agricultores</label>                               
                             </li>
                             <li>      
-                                <input type="radio" id="opcao6" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao6" name="situacao" value="Não, não pretendo" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao6">Não, não pretendo</label>                               
                             </li>
                         </ul>

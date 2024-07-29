@@ -27,34 +27,34 @@
                     <div id="background">
                         <h6 class="titulo">Qual área de estudos mais te motiva?</h6>
                     </div>
-                    <form action="/processar_resposta" method="POST">
+                    <form id="areaForm" action="/area" method="POST">
                         <ul class="opcoes">
                             <li>      
-                                <input type="radio" id="opcao1" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao1" name="area" value="Ciências Agrárias" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao1">Ciências Agrárias</label>                               
                             </li>
                             <li>      
-                                <input type="radio" id="opcao2" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao2" name="area" value="Ciências Humanas" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao2">Ciências Humanas</label>                               
                             </li>
                             <li>      
-                                <input type="radio" id="opcao3" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao3" name="area" value="Ciências Sociais Aplicadas" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao3">Ciências Sociais Aplicadas</label>                               
                             </li>
                             <li>      
-                                <input type="radio" id="opcao4" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao4" name="area" value="Ciências Exatas e da Terra" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao4">Ciências Exatas e da Terra</label>                               
                             </li>
                             <li>      
-                                <input type="radio" id="opcao5" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao5" name="area" value="Engenharias e Tecnologias" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao5">Engenharias e Tecnologias</label>                               
                             </li>
                             <li>      
-                                <input type="radio" id="opcao6" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao6" name="area" value="Multidiciplinar" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao6">Multidiciplinar</label>                               
                             </li>
                             <li>      
-                                <input type="radio" id="opcao7" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao7" name="area" value="Todas as áreas" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao7">Todas as áreas</label>                               
                             </li>
                         </ul>

@@ -24,34 +24,34 @@
                     <div id="background">
                         <h6 class="titulo">Em qual região de Santa Catarina você prefere estudar?</h6>
                     </div>
-                    <form action="/processar_resposta" method="POST">
+                    <form id="regiaoForm" action="/regiao" method="POST">
                         <ul class="opcoes">
                             <li>      
-                                <input type="radio" id="opcao1" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao1" name="regiao" value="Norte" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao1">Norte</label>                               
                             </li>
                             <li>      
-                                <input type="radio" id="opcao2" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao2" name="regiao" value="Sul" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao2">Sul</label>                               
                             </li>
                             <li>      
-                                <input type="radio" id="opcao3" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao3" name="regiao" value="Oeste" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao3">Oeste</label>                               
                             </li>
                             <li>      
-                                <input type="radio" id="opcao4" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao4" name="regiao" value="Vale do Itajaí" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao4">Vale do Itajaí</label>                               
                             </li>
                             <li>      
-                                <input type="radio" id="opcao5" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao5" name="regiao" value="Grande Florianópolis" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao5">Grande Florianópolis</label>                               
                             </li>
                             <li>      
-                                <input type="radio" id="opcao6" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao6" name="regiao" value="Serrana" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao6">Serrana</label>                               
                             </li>
                             <li>      
-                                <input type="radio" id="opcao7" name="situacao" value="nao_concluiu_fundamental">
+                                <input type="radio" id="opcao7" name="regiao" value="Em qualquer região" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao7">Em qualquer região</label>                               
                             </li>
                         </ul>

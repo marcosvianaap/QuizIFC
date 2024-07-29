@@ -24,16 +24,28 @@
             <div class="container">
                 <div class="content">
                     <div id="background">
-                        <h6 class="titulo">PRONTO!</h6>
-                        <h6 class="titulo">Conheça os cursos feitos para você:</h6>
+                        <h6 class="titulo">Cursos Recomendados</h6>
                     </div>
-                    <form action="/processar_resposta" method="POST">
-                        <ul class="opcoes">
-                            <li> 
-                                <label  class="titulo" for="opcao1"></label>                               
-                            </li>                              
-                        </ul>
-                    </form>
+                    <ul class="opcoes">
+                        {% for curso in cursos %}
+                        <li>
+                            <div class="curso-detalhe">
+                                <h4>{{ curso.Curso }}</h4>
+                                <p><strong>Turno:</strong> {{ curso.Turno }}</p>
+                                <p><strong>Campus:</strong> {{ curso.Campus }}</p>
+                                <p><strong>Modalidade:</strong> {{ curso.Modalidade }}</p>
+                                <p><strong>Região:</strong> {{ curso.Região }}</p>
+                                <p><strong>Área Temática:</strong> {{ curso.Área_Temática }}</p>
+                            
+                                <a href="{{ curso.Site }}" target="_blank" style="color: #007bff;">Mais informações</a>
+                            </div>
+                        </li>
+                        {% else %}
+                        <li>
+                            <p>Nenhum curso encontrado com os critérios selecionados.</p>
+                        </li>
+                        {% endfor %}
+                    </ul>
                 </div>
             </div>
             <ul class="conteudo">
