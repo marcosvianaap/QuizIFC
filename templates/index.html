@@ -17,12 +17,13 @@
                 <img src="../static/img/tela1.png" alt="logo de inicio">
             </div>
             <div class="bottom-section">
-                <button class="quiz-button">
-                    <img src="../static/img/iniciarquiz.png" alt="Botão para iniciar o quiz">
-                </button>
+                <a href="{{ url_for('tela_dois') }}">
+                    <button class="quiz-button">
+                        <img src="../static/img/iniciarquiz.png" alt="Botão para iniciar o quiz">
+                    </button>
+                </a>
             </div>
         </div>
-        
         <script src="../static/script.js"></script> <!-- Referencia para arquivos js -->
         <script src="../static/js/jquery-3.6.4.js"></script> <!-- Chamada de jQuery -->  
     </body>
