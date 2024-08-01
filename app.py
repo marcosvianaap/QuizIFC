@@ -58,8 +58,8 @@ def tela_quatro():
 @app.route('/ac', methods=['GET', 'POST'])
 def tela_cinco():
     if request.method == 'POST':
-        acao_afirmativa = request.form.get('acao_afirmativa')
-        session['acao_afirmativa'] = acao_afirmativa
+        ac = request.form.get('ac')
+        session['ac'] = ac
         return redirect(url_for('result'))
     return render_template('tela5.html')
 
@@ -69,9 +69,8 @@ def result():
     situacao = session.get('situacao')
     regiao = session.get('regiao')
     area = session.get('area')
-    acao_afirmativa = session.get('acao_afirmativa')
-    print(situacao,"\n" , regiao,"\n" , area, acao_afirmativa, "\n")
-
+    ac = session.get('ac')
+   
     # Inicia a consulta para cursos recomendados
     cursos_recomendados_query = IFC.query
     
@@ -88,8 +87,8 @@ def result():
         cursos_recomendados_query = cursos_recomendados_query.filter(IFC.Área_Temática.in_(area))
 
       # Aplica filtro por ação afirmativa, se especificado e não for "Não, não pretendo"
-    if acao_afirmativa and acao_afirmativa != "Não, não pretendo":
-        cursos_recomendados_query = cursos_recomendados_query.filter_by(Ação_Afirmativa=acao_afirmativa)
+    if ac and ac != "Não, não pretendo":
+        cursos_recomendados_query = cursos_recomendados_query.filter_by(Ação_Afirmativa=ac)
 
     # Executa a consulta e obtém os resultados
     cursos_recomendados = cursos_recomendados_query.all()
