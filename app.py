@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.secret_key = 'sua_chave_secreta'  
+app.secret_key = 'quizifc'  
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db/IFC.db'
 db = SQLAlchemy(app)
 
@@ -24,7 +24,7 @@ def home():
     return render_template('index.html')
 
 @app.route('/situacao', methods=['GET', 'POST'])
-def situacao():
+def tela_dois():
     if request.method == 'POST':
         situacao = request.form.get('situacao')
         session['situacao'] = situacao
@@ -44,7 +44,7 @@ def tela_quatro():
     if request.method == 'POST':
         area = request.form.get('area')
         session['area'] = area
-        return redirect(url_for('resultado'))
+        return redirect(url_for('tela_cinco'))
     return render_template('tela4.html')
 
 @app.route('/ac', methods=['GET', 'POST'])
@@ -52,11 +52,11 @@ def tela_cinco():
     if request.method == 'POST':
         acao_afirmativa = request.form.get('acao_afirmativa')
         session['acao_afirmativa'] = acao_afirmativa
-        return redirect(url_for('tela_cinco'))
+        return redirect(url_for('result'))
     return render_template('tela5.html')
 
 @app.route('/resultado', methods=['GET'])
-def resultado():
+def result():
     # Recupera todas as respostas armazenadas na sessão
     situacao = session.get('situacao')
     regiao = session.get('regiao')
