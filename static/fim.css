@@ -87,7 +87,7 @@
 
 /* Ajustes para o botão "Conhecer Áreas de Estudo" 
 aplicado somente no template fim "fim.html"*/
-#position_botton_acoes {
+#reinit {
     width: 39%;                                         /* Ajusta o tamanho da imagem */
     position: absolute;                                 /* Posicionamento absoluto para controle preciso */
     top: 18%;                                           /* Ajusta o posicionamento vertical */
@@ -96,16 +96,46 @@ aplicado somente no template fim "fim.html"*/
     cursor: pointer;                                    /* Adiciona um ponteiro para interação */
 }
 
-ul.conteudo{
+.curso-detalhe p{
+    margin: 0%;
+    text-align: left;
+}
+
+.curso-detalhe a{
+    margin-top: 50px;
+}
+.curso-detalhe a:hover{
+    color: #942294;
+}
+
+ul.conteudo {
     width: 100%;                                    /* Largura total da tela */
     max-width: 100%;                                /* Largura máxima para evitar overflow */
     color: #fff;
-    list-style: none;                                  /* Remove marcadores de lista */
-    text-decoration-line: underline;
-    margin: 0%;
+    list-style: none;                               /* Remove marcadores de lista */
+    margin: 0;
     padding-left: 30px;
-    li h5{
-        margin: 0%;
-        cursor: pointer;
-    }                                 
+}
+
+ul.conteudo li {
+    margin: 0;
+    padding-bottom: 3px;                           /* Espaço entre os itens de lista */
+}
+
+ul.conteudo li a{
+    text-decoration: none;
+}
+
+ul.conteudo li h5 {
+    margin: 0;
+    color: #fff;
+    cursor: pointer;
+    display: inline;  
+    border-bottom: 1px solid #fff;                /* Define a cor e espessura do sublinhado */
+    outline: none;                                  /* Remove a borda padrão de foco */
+}
+
+ul.conteudo li h5:hover{
+    color: #942294;
+    border-bottom: 1px solid #942294; 
 }

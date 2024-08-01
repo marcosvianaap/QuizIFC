@@ -16,15 +16,17 @@
             <!-- Topo da tela com a imagem -->
             <div class="top-section-two">
                 <img src="../static/img/tela6.png" alt="">
-                <a href="https://ingresso.ifc.edu.br/category/acoes-afirmativas/">
-                    <img id="position_botton_acoes" src="../static/img/reiniciar.png" alt="botão para conhecer as areas de estudo">
+                <a href="{{ url_for('reiniciar_quiz') }}">
+                    <img id="reinit" src="../static/img/reiniciar.png" alt="botão para reiniciar o quiz">
                 </a>
+                
             </div>
             <!-- Conteúdo Dinâmico da Tela -->
             <div class="container">
                 <div class="content">
                     <div id="background">
-                        <h6 class="titulo">Cursos Recomendados</h6>
+                        <h6 class="titulo"> PRONTO!</h6>
+                        <h6 class="titulo">Confira os cursos disponiveis para você:</h6>
                     </div>
                     <ul class="opcoes">
                         {% for curso in cursos %}
@@ -42,7 +44,7 @@
                         </li>
                         {% else %}
                         <li>
-                            <p>Nenhum curso encontrado com os critérios selecionados.</p>
+                            <p class="titulo">Nenhum curso encontrado com os critérios selecionados.</p>
                         </li>
                         {% endfor %}
                     </ul>
@@ -54,6 +56,7 @@
                         <h5>Quero me inscrever</h5>
                     </a>
                 </li>
+                <li>
                     <a href="https://ingresso.ifc.edu.br/guia-de-cursos/">
                         <h5>Quero conhecer outros cursos do IFC</h5>
                     </a>
@@ -65,7 +68,7 @@
                 </li>
                 <li>
                     <a href="https://estudante.ifc.edu.br/category/programa-de-auxilios-estudantis-pae/?_gl=1*1grrcek*_ga*MTY2MDcwNjI3My4xNzA2MDE2NDI2*_ga_FM2DQDNX9M*MTcyMTk5NTE1OS4zOS4xLjE3MjE5OTUyMTkuMC4wLjA">
-                        <h5>Quero saber sobre Auxílios Estudantis</h5>
+                        <h5>Quero saber mais sobre Auxílios Estudantis</h5>
                     </a>
                 </li>
                 <li>
