@@ -24,16 +24,21 @@
         height: auto;                                   /* Ajusta automaticamente a altura da imagem para manter a proporção */
     }
 
-    .quiz-button {
-        background: none;                               /* Remove qualquer background do botão */
-        border: none;                                   /* Remove a borda do botão */
+    
+
+    .bottom-section a {
+    
+        display:inline-flex;                            /* Usa o layout flexível */
+        justify-content: center;                        /* Centraliza horizontalmente */
+        align-items: center;                            /* Centraliza verticalmente */
     }
 
-    .quiz-button img {
+    .bottom-section img {
         padding-top: 15%;                               /* Adiciona um padding no topo da imagem do botão */
         width: 70%;                                     /* Define a largura da imagem do botão como 70% do elemento pai */
         height: auto;                                   /* Ajusta automaticamente a altura da imagem do botão para manter a proporção */
         cursor: pointer;                                /* Muda o cursor para indicar que o elemento é clicável */
+       
     }
 
 }

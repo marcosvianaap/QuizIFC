@@ -7,6 +7,8 @@
         align-items: center;                            /* Centraliza verticalmente o conteúdo */
         background-image: url('img/fundo_verde.png');   /* Define a imagem de fundo */
         background-size: cover;                         /* Cobre todo o espaço do body com a imagem */
+     
+     
     }
 
     .container {
@@ -65,7 +67,6 @@
         margin: 2px 3.3%;                               /* Margens entre os itens */
         border: 2px solid #444;                       /* Borda de 2px ao redor dos itens */
         border-radius: 25px;                            /* Bordas arredondadas */
-        display: flex;                                  /* Utilizando flexbox para layout */
         align-items: center;                            /* Centraliza verticalmente o conteúdo */
         justify-content: center;                        /* Centraliza horizontalmente o conteúdo */
         flex: 1 0 auto;                                 /* Faz com que todos os itens tenham o mesmo tamanho */
@@ -94,6 +95,11 @@ aplicado somente no template fim "fim.html"*/
     left: 73%;                                          /* Alinha horizontalmente ao centro */
     transform: translate(-50%, -50%);                   /* Centraliza o botão */
     cursor: pointer;                                    /* Adiciona um ponteiro para interação */
+}
+
+.curso-detalhe h4{ /* Ajusta o tamanho da fonte do curso */
+  display: inline;
+  font-size: large;
 }
 
 .curso-detalhe p{

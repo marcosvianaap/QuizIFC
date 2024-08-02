@@ -5,26 +5,24 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
-        <link rel="stylesheet" href="../static/bootstrap/js/bootstrap.js">
         <link rel="stylesheet" href="../static/style.css">
         <link rel="stylesheet" href="../static/tela_um.css">
-        <!-- <link rel="icon" type="image/png" href="janela"> -->
+        <!-- <link rel="icon" type="image/png" href="../static/img/favicon.png"> -->
         <title>QuizIFC</title>
     </head>
     <body>
         <div class="container">
             <div class="top-section">
-                <img src="../static/img/tela1.png" alt="logo de inicio">
+                <img src="../static/img/tela1.png" alt="Logotipo do QuizIFC">
             </div>
             <div class="bottom-section">
-                <a href="{{ url_for('tela_dois') }}">
-                    <button class="quiz-button">
-                        <img src="../static/img/iniciarquiz.png" alt="Botão para iniciar o quiz">
-                    </button>
+                <a href="{{ url_for('tela_dois') }}">                  
+                    <img src="../static/img/iniciarquiz.png" alt="Botão para iniciar o quiz">                   
                 </a>
             </div>
         </div>
-        <script src="../static/script.js"></script> <!-- Referencia para arquivos js -->
         <script src="../static/js/jquery-3.6.4.js"></script> <!-- Chamada de jQuery -->  
+        <script src="../static/bootstrap/js/bootstrap.js"></script> <!-- Referência correta do Bootstrap JS -->
+        <script src="../static/script.js"></script> <!-- Referência para arquivos JS personalizados -->
     </body>
 </html>

@@ -49,9 +49,8 @@ def tela_tres():
 @app.route('/area', methods=['GET', 'POST'])
 def tela_quatro():
     if request.method == 'POST':
-        area = request.form.get('area')
-        opcoes_selecionadas = area.split(', ')
-        session['area'] = opcoes_selecionadas
+        area = request.form.get('area')     
+        session['area'] = area
         return redirect(url_for('tela_cinco'))
     return render_template('tela4.html')
 
@@ -59,7 +58,8 @@ def tela_quatro():
 def tela_cinco():
     if request.method == 'POST':
         ac = request.form.get('ac')
-        session['ac'] = ac
+        opcoes_selecionadas = ac.split(' - ')
+        session['ac'] = opcoes_selecionadas
         return redirect(url_for('result'))
     return render_template('tela5.html')
 
@@ -70,25 +70,24 @@ def result():
     regiao = session.get('regiao')
     area = session.get('area')
     ac = session.get('ac')
+    
    
     # Inicia a consulta para cursos recomendados
     cursos_recomendados_query = IFC.query
     
-     # Aplica filtro por situação, se especificado
-    if situacao:
-        cursos_recomendados_query = cursos_recomendados_query.filter(IFC.Modalidade.in_(situacao))
+   
+    cursos_recomendados_query = cursos_recomendados_query.filter(IFC.Modalidade.in_(situacao))
 
-    # Aplica filtro por região, se especificado e não for "Em qualquer região"
-    if regiao and regiao != "Em qualquer região":
+   
+    if regiao != 'Região':
         cursos_recomendados_query = cursos_recomendados_query.filter_by(Região=regiao)
+    
+    if area != 'Área_Temática':
+        cursos_recomendados_query = cursos_recomendados_query.filter_by(Área_Temática=area)
 
-    # Aplica filtro por área temática, exceto se for "Todas as áreas"
-    if area and area != "Todas as áreas":
-        cursos_recomendados_query = cursos_recomendados_query.filter(IFC.Área_Temática.in_(area))
-
-      # Aplica filtro por ação afirmativa, se especificado e não for "Não, não pretendo"
-    if ac and ac != "Não, não pretendo":
-        cursos_recomendados_query = cursos_recomendados_query.filter_by(Ação_Afirmativa=ac)
+    if ac != 'Ação_Afirmativa':
+        cursos_recomendados_query = cursos_recomendados_query.filter(IFC.Ação_Afirmativa.in_(ac))
+   
 
     # Executa a consulta e obtém os resultados
     cursos_recomendados = cursos_recomendados_query.all()
