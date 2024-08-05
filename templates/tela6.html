@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="../static/style.css">
         <link rel="stylesheet" href="../static/fim.css">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="../static/img/logo_ifc.png">
         <title>Resultado</title>
     </head>
     <body>
@@ -17,7 +18,7 @@
             <div class="top-section-two">
                 <img src="../static/img/tela6.png" alt="">
                 <a href="{{ url_for('reiniciar_quiz') }}">
-                    <img id="reinit" src="../static/img/reiniciar.png" alt="botão para reiniciar o quiz">
+                    <img id="reinit" src="../static/img/reiniciar.png" alt="botão para reiniciar o quiz" class="botoes" >
                 </a>
                 
             </div>
@@ -51,7 +52,7 @@
                 </div>
             </div>
             <ul class="conteudo">
-                <li>
+                <li >
                     <a href="https://ingresso.ifc.edu.br/">
                         <h5>Quero me inscrever</h5>
                     </a>
@@ -78,7 +79,8 @@
                 </li>
             </ul>  
         </div>
-        <script src="../static/script.js"></script> <!-- Referencia para arquivos js -->
         <script src="../static/js/jquery-3.6.4.js"></script> <!-- Chamada de jQuery -->  
+        <script src="../static/bootstrap/js/bootstrap.js"></script> <!-- Referência correta do Bootstrap JS -->
+        <script src="../static/script.js"></script> <!-- Referência para arquivos JS personalizados -->
     </body>
 </html>

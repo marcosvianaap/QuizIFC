@@ -65,34 +65,39 @@ def tela_cinco():
 
 @app.route('/resultado', methods=['GET'])
 def result():
-    # Recupera todas as respostas armazenadas na sessão
-    situacao = session.get('situacao')
-    regiao = session.get('regiao')
-    area = session.get('area')
-    ac = session.get('ac')
+    try:
+        # Recupera todas as respostas armazenadas na sessão
+        situacao = session.get('situacao')
+        regiao = session.get('regiao')
+        area = session.get('area')
+        ac = session.get('ac') 
+ 
+        # Inicia a consulta para cursos recomendados
+        cursos_recomendados_query = IFC.query
+        cursos_recomendados_query = cursos_recomendados_query.filter(IFC.Modalidade.in_(situacao)) 
+        
+        if regiao != 'Região':
+            cursos_recomendados_query = cursos_recomendados_query.filter_by(Região=regiao)   
+        if area != 'Área_Temática':
+            cursos_recomendados_query = cursos_recomendados_query.filter_by(Área_Temática=area)
+        if ac != 'Ação_Afirmativa':
+            cursos_recomendados_query = cursos_recomendados_query.filter(IFC.Ação_Afirmativa.in_(ac))
+            
+        
+
+        # Executa a consulta e obtém os resultados
+        cursos_recomendados = cursos_recomendados_query.all()
+
+      
+
+        return render_template('tela6.html', cursos=cursos_recomendados)
     
-   
-    # Inicia a consulta para cursos recomendados
-    cursos_recomendados_query = IFC.query
-    
-   
-    cursos_recomendados_query = cursos_recomendados_query.filter(IFC.Modalidade.in_(situacao))
+    except Exception as e:
+        # Opcional: Logar o erro para análise
+        print(f"Erro ao processar o resultado: {e}")
 
-   
-    if regiao != 'Região':
-        cursos_recomendados_query = cursos_recomendados_query.filter_by(Região=regiao)
-    
-    if area != 'Área_Temática':
-        cursos_recomendados_query = cursos_recomendados_query.filter_by(Área_Temática=area)
-
-    if ac != 'Ação_Afirmativa':
-        cursos_recomendados_query = cursos_recomendados_query.filter(IFC.Ação_Afirmativa.in_(ac))
-   
-
-    # Executa a consulta e obtém os resultados
-    cursos_recomendados = cursos_recomendados_query.all()
-
-    return render_template('tela6.html', cursos=cursos_recomendados)
+        # Redireciona para o início do quiz em caso de erro
+        return redirect(url_for('reiniciar_quiz'))  # rota do início do quiz
 
 
 @app.route('/reiniciar')

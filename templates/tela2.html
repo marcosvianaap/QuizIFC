@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="../static/style.css">
         <link rel="stylesheet" href="../static/tela_2-5.css">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="../static/img/logo_ifc.png">
         <title>Situação</title>
     </head>
     <body>
@@ -27,27 +28,27 @@
                     <!-- Adicione o atributo onchange para capturar o evento de mudança -->
                     <form id="situacaoForm" action="/situacao" method="POST">
                         <ul class="opcoes">
-                            <li>      
+                            <li style="--order: 1">      
                                 <input type="radio" id="opcao1" name="situacao" value="Técnico Integrado"  onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao1">Já concluí ou estou finalizando o ensino fundamental</label>                               
                             </li>
-                            <li>      
+                            <li style="--order: 2">      
                                 <input type="radio" id="opcao2" name="situacao" value="EJA"  onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao2">Não concluí o ensino médio</label>                               
                             </li>
-                            <li>      
+                            <li style="--order: 3">      
                                 <input type="radio" id="opcao3" name="situacao" value="EJA, Técnico Integrado"  onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao3">Tenho 18 anos ou mais e não concluí o ensino médio</label>                               
-                            </li>
-                            <li>      
+                            </li >
+                            <li style="--order: 4">      
                                 <input type="radio" id="opcao4" name="situacao" value="Técnico Integrado, Técnico Subsequente"  onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao4">Estou cursando o ensino médio em outra instituição</label>                               
                             </li>
-                            <li>      
+                            <li style="--order: 5">      
                                 <input type="radio" id="opcao5" name="situacao" value="Técnico Subsequente, Superior Licenciatura, Superior Bacharelado, Superior Tecnologia"  onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao5">Já concluí ou estou finalizando o ensino médio</label>                               
                             </li>
-                            <li>      
+                            <li style="--order: 6">      
                                 <input type="radio" id="opcao6" name="situacao" value="Técnico Subsequente, Superior Licenciatura, Superior Bacharelado, Superior Tecnologia, Pós-graduação lato sensu, Pós-graduação Stricto Sensu, Pós-Graduação em Agronomia: Sistemas Agrícolas Regionais, Mestrado Profissional em Produção e Sanidade Animal, Mestrado Profissional em Tecnologia e Ambiente"  onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao6">Já concluí minha graduação</label>                               
                             </li>
@@ -56,7 +57,8 @@
                 </div>
             </div>
         </div>
-        <script src="../static/script.js"></script> <!-- Referencia para arquivos js -->
         <script src="../static/js/jquery-3.6.4.js"></script> <!-- Chamada de jQuery -->  
+        <script src="../static/bootstrap/js/bootstrap.js"></script> <!-- Referência correta do Bootstrap JS -->
+        <script src="../static/script.js"></script> <!-- Referência para arquivos JS personalizados -->
     </body>
 </html>

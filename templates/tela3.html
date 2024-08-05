@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="../static/style.css">
         <link rel="stylesheet" href="../static/tela_2-5.css">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="../static/img/logo_ifc.png">
         <title>Região</title>
     </head>
     <body>
@@ -26,23 +27,23 @@
                     </div>
                     <form id="regiaoForm" action="/regiao" method="POST">
                         <ul class="opcoes">
-                            <li>      
+                            <li style="--order: 1">      
                                 <input type="radio" id="opcao1" name="regiao" value="Norte" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao1">Norte</label>                               
                             </li>
-                            <li>      
+                            <li style="--order: 2">      
                                 <input type="radio" id="opcao2" name="regiao" value="Sul" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao2">Sul</label>                               
                             </li>
-                            <li>      
+                            <li style="--order: 3">      
                                 <input type="radio" id="opcao3" name="regiao" value="Oeste" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao3">Oeste</label>                               
                             </li>
-                            <li>      
+                            <li style="--order: 4">      
                                 <input type="radio" id="opcao4" name="regiao" value="Vale do Itajaí" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao4">Vale do Itajaí</label>                               
                             </li>
-                            <li>      
+                            <li style="--order: 5">      
                                 <input type="radio" id="opcao7" name="regiao" value="Região" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao7">Em qualquer região</label>                               
                             </li>
@@ -51,7 +52,8 @@
                 </div>
             </div>
         </div>
-        <script src="../static/script.js"></script> <!-- Referencia para arquivos js -->
         <script src="../static/js/jquery-3.6.4.js"></script> <!-- Chamada de jQuery -->  
+        <script src="../static/bootstrap/js/bootstrap.js"></script> <!-- Referência correta do Bootstrap JS -->
+        <script src="../static/script.js"></script> <!-- Referência para arquivos JS personalizados -->
     </body>
 </html>

@@ -17,10 +17,9 @@
             <div class="top-section-two">
                 <img src="../static/img/tela4.png" alt="logo de inicio">
                 <a href="https://ingresso.ifc.edu.br/guia-de-cursos/">
-                    <img id="position_botton_area" src="../static/img/areasdeestudo.png" alt="botão para conhecer as areas de estudo">
+                    <img id="position_botton_area" src="../static/img/areasdeestudo.png" alt="botão para conhecer as areas de estudo" class="botoes">
                 </a>
             </div>
-
             <!-- Conteúdo Dinâmico da Tela -->
             <div class="container">
                 <div class="content">
@@ -29,31 +28,31 @@
                     </div>
                     <form id="areaForm" action="/area" method="POST">
                         <ul class="opcoes">
-                            <li>      
+                            <li style="--order: 1">      
                                 <input type="radio" id="opcao1" name="area" value="Ciências Agrárias" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao1">Ciências Agrárias</label>                               
                             </li>
-                            <li>      
+                            <li style="--order: 2">      
                                 <input type="radio" id="opcao2" name="area" value="Ciências Humanas" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao2">Ciências Humanas</label>                               
                             </li>
-                            <li>      
+                            <li style="--order: 3">      
                                 <input type="radio" id="opcao3" name="area" value="Ciências Sociais Aplicadas" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao3">Ciências Sociais Aplicadas</label>                               
                             </li>
-                            <li>      
+                            <li style="--order: 4">      
                                 <input type="radio" id="opcao4" name="area" value="Ciências Exatas e da Terra" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao4">Ciências Exatas e da Terra</label>                               
                             </li>
-                            <li>      
+                            <li style="--order: 5">      
                                 <input type="radio" id="opcao5" name="area" value="Engenharias e Tecnologias" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao5">Engenharias e Tecnologias</label>                               
                             </li>
-                            <li>      
+                            <li style="--order: 6">      
                                 <input type="radio" id="opcao6" name="area" value="Multidisciplinar" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao6">Multidisciplinar</label>                               
                             </li>
-                            <li>      
+                            <li style="--order: 7">      
                                 <input type="radio" id="opcao7" name="area" value="Área_Temática" onchange="this.form.submit()">
                                 <label  class="titulo" for="opcao7">Todas as áreas</label>                               
                             </li>
@@ -62,7 +61,8 @@
                 </div>
             </div>
         </div>
-        <script src="../static/script.js"></script> <!-- Referencia para arquivos js -->
         <script src="../static/js/jquery-3.6.4.js"></script> <!-- Chamada de jQuery -->  
+        <script src="../static/bootstrap/js/bootstrap.js"></script> <!-- Referência correta do Bootstrap JS -->
+        <script src="../static/script.js"></script> <!-- Referência para arquivos JS personalizados -->
     </body>
 </html>

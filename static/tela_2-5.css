@@ -91,22 +91,59 @@
 /* Ajustes para o botão "Conhecer Áreas de Estudo" 
 aplicado somente no template 4 "tela_quatro.html"*/
 #position_botton_area {
-    width: 43%;                                         /* Ajusta o tamanho da imagem */
+    width: 40%;                                         /* Ajusta o tamanho da imagem */
     position: absolute;                                 /* Posicionamento absoluto para controle preciso */
-    top: 15%;                                           /* Ajusta o posicionamento vertical */
-    left: 73%;                                          /* Alinha horizontalmente ao centro */
-    transform: translate(-50%, -50%);                   /* Centraliza o botão */
+    top: 5%;                                           /* Ajusta o posicionamento vertical */
+    left: 55%;                                          /* Alinha horizontalmente ao centro */ 
     cursor: pointer;                                    /* Adiciona um ponteiro para interação */
 }
 
-/* Ajustes para o botão "Conhecer Áreas de Estudo" 
+/* Ajustes para o botão "Conhecer Acoes Afirmativas" 
 aplicado somente no template 5 "tela_cinco.html"*/
 #position_botton_acoes {
-    width: 46%;                                         /* Ajusta o tamanho da imagem */
+    width: 42%;                                         /* Ajusta o tamanho da imagem */
     position: absolute;                                 /* Posicionamento absoluto para controle preciso */
-    top: 15%;                                           /* Ajusta o posicionamento vertical */
-    left: 30%;                                          /* Alinha horizontalmente ao centro */
-    transform: translate(-50%, -50%);                   /* Centraliza o botão */
+    top: 5%;                                           /* Ajusta o posicionamento vertical */
+    left: 10%;                                          /* Alinha horizontalmente ao centro */
     cursor: pointer;                                    /* Adiciona um ponteiro para interação */
 }
 
+
+.botoes{
+    /* Inicialmente, defina a posição de partida */
+    animation: pulse 1.5s infinite; /* Adiciona animação */
+    transition: transform 0.2s ease-in-out; /* Suaviza a transformação */
+}
+/* Animação de pulsação */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1); /* Tamanho original */
+    }
+    50% {
+        transform: scale(1.1); /* Aumenta ligeiramente */
+    }
+}
+
+
+/* Animação slideIn */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Começa fora da vista */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Volta para a posição original */
+    }
+}
+
+/* Aplicação de animação na classe content */
+.content .opcoes li {
+    opacity: 0; /* Inicialmente oculto */
+    animation: slideIn 0.6s ease forwards;
+}
+
+.content .opcoes li {
+    /* Calcula automaticamente o delay com base na posição do item */
+    animation-delay: calc(0.2s * var(--order));
+}

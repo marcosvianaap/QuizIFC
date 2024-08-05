@@ -41,4 +41,21 @@
        
     }
 
+    .bottom-section img {
+        /* Inicialmente, defina a posição de partida */
+        position: relative;
+        animation: pulse 1.5s infinite; /* Adiciona animação */
+        transition: transform 0.2s ease-in-out; /* Suaviza a transformação */
+    }
+    
+    /* Animação de pulsação */
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1); /* Tamanho original */
+        }
+        50% {
+            transform: scale(1.1); /* Aumenta ligeiramente */
+        }
+    }
+
 }
