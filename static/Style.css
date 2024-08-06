@@ -1,7 +1,14 @@
 
 /* Estilos gerais - conteúdo oculto fora da media query */
-body{ 
-    display: none; /* Oculta o conteúdo por padrão */
+   /* Estilos para a Tela 2 */  
+   body {
+    display: flex;                                  /* Define o layout como flexbox */
+    justify-content: center;                        /* Centraliza horizontalmente o conteúdo */
+    align-items: center;                            /* Centraliza verticalmente o conteúdo */
+    background-image: url('img/fundo_verde.png');   /* Define a imagem de fundo */
+    background-size: cover;                         /* Cobre todo o espaço do body com a imagem */
+    background-attachment: fixed;                   /* Mantém a imagem fixa */
+ 
 }
 
 .titulo {

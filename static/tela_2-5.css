@@ -1,149 +1,151 @@
 /* Estilos específicos para dispositivos móveis com largura máxima de 320px e altura máxima de 578px */
 @media (max-width: 320px) and (max-height: 578px) {
-    /* Estilos para a Tela 2 */  
+    /* Estilos gerais */  
     body {
-        display: flex;                                  /* Define o layout como flexbox */
-        justify-content: center;                        /* Centraliza horizontalmente o conteúdo */
-        align-items: center;                            /* Centraliza verticalmente o conteúdo */
-        background-image: url('img/fundo_verde.png');   /* Define a imagem de fundo */
-        background-size: cover;                         /* Cobre todo o espaço do body com a imagem */
+        display: flex;                                      /* Define o layout como flexbox */
+        justify-content: center;                            /* Centraliza horizontalmente o conteúdo */
+        align-items: center;                                /* Centraliza verticalmente o conteúdo */
+        background-image: url('img/fundo_verde.png');       /* Define a imagem de fundo */
+        background-size: cover;                             /* Cobre todo o espaço do body com a imagem */
     }
 
     .container {
-        width: 100%;                                    /* Largura total da tela */
-        max-width: 100%;                                /* Largura máxima para evitar overflow */
-        padding: 0;                                     /* Remove o espaçamento interno */
+        width: 100%;                                        /* Largura total da tela */
+        max-width: 100%;                                    /* Largura máxima para evitar overflow */
+        padding: 0;                                         /* Remove o espaçamento interno */
     }
 
     .top-section-two {
-        width: 100%;                                    /* Largura total da tela */
-        max-width: 100%;                                /* Largura máxima para evitar overflow */
+        width: 100%;                                        /* Largura total da tela */
+        max-width: 100%;                                    /* Largura máxima para evitar overflow */
     }
 
     .top-section-two img {
-        background: none;                               /* Remove qualquer fundo */
-        border: none;                                   /* Remove bordas */
-        width: 100%;                                    /* Largura total da tela */
-        height: auto;                                   /* Ajusta a altura automaticamente */
+        background: none;                                   /* Remove qualquer fundo */
+        border: none;                                       /* Remove bordas */
+        width: 100%;                                        /* Largura total da tela */
+        height: auto;                                       /* Ajusta a altura automaticamente */
     }
 
     .content {
-        width: 90%;                                     /* Largura de 90% do container */
-        max-width: 300px;                               /* Largura máxima de 300px */
-        min-height: 200px;                              /* Altura mínima de 200px */
-        justify-content: center;                        /* Centraliza o conteúdo */
-        text-align: center;                             /* Centraliza o texto */
-        background-color: #fff;                       /* Fundo branco */
-        border-radius: 10px;                            /* Bordas arredondadas */
-        margin: 8px 16px;                               /* Margens ao redor do container */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);     /* Adiciona sombra ao redor do container */
+        width: 90%;                                         /* Largura de 90% do container */
+        max-width: 300px;                                   /* Largura máxima de 300px */
+        min-height: 200px;                                  /* Altura mínima de 200px */
+        justify-content: center;                            /* Centraliza o conteúdo */
+        text-align: center;                                 /* Centraliza o texto */
+        background-color: #fff;                           /* Fundo branco */
+        border-radius: 10px;                                /* Bordas arredondadas */
+        margin: 8px 16px;                                   /* Margens ao redor do container */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);         /* Adiciona sombra ao redor do container */
     }
 
-    #background {                                       /* Estilos para o fundo da seção superior */
-        background-color: #c72929;                    /* Cor de fundo vermelho */
-        border-top-left-radius: 10px;                   /* Borda superior esquerda arredondada */
-        border-top-right-radius: 10px;                  /* Borda superior direita arredondada */
-        margin-bottom: 0px;                             /* Remove a margem inferior */
-        padding: 5%;                                    /* Espaçamento interno de 5% */
+    #background {                                           /* Estilos para o fundo da seção superior */
+        background-color: #c72929;                        /* Cor de fundo vermelho */
+        border-top-left-radius: 10px;                       /* Borda superior esquerda arredondada */
+        border-top-right-radius: 10px;                      /* Borda superior direita arredondada */
+        margin-bottom: 0px;                                 /* Remove a margem inferior */
+        padding: 5%;                                        /* Espaçamento interno de 5% */
     }
 
-    #background h6 {                                    /* Estilos para o título */
-        margin: 0%;                                     /* Remove margens */
-        color: #fff;                                  /* Cor do texto branca */
+    #background h6 {                                        /* Estilos para o título */
+        margin: 0%;                                         /* Remove margens */
+        color: #fff;                                      /* Cor do texto branca */
     } 
 
     ul.opcoes { 
-        list-style: none;                               /* Remove marcadores de lista */
-        margin-bottom: 7px;                             /* Margem inferior */
-        padding: 7px 1px 7px;                           /* Espaçamento interno */
+        list-style: none;                                   /* Remove marcadores de lista */
+        margin-bottom: 7px;                                 /* Margem inferior */
+        padding: 7px 1px 7px;                               /* Espaçamento interno */
     }
 
     ul.opcoes li {  
-        font-size: 0.8em;                               /* Define o tamanho da fonte */
-        color: #868484;                               /* Cor do texto */
-        padding: 0%;                                    /* Remove espaçamento interno */
-        margin: 2px 3.3%;                               /* Margens entre os itens */
-        border: 2px solid #868484;                    /* Borda de 2px ao redor dos itens */
-        border-radius: 25px;                            /* Bordas arredondadas */
-        display: flex;                                  /* Utilizando flexbox para layout */
-        align-items: center;                            /* Centraliza verticalmente o conteúdo */
-        justify-content: center;                        /* Centraliza horizontalmente o conteúdo */
-        flex: 1 0 auto;                                 /* Faz com que todos os itens tenham o mesmo tamanho */
-        min-height: 32px;                               /* Altura mínima para os itens */
-        box-sizing: border-box;                         /* Inclui o padding e border no cálculo do tamanho total */
+        font-size: 0.8em;                                   /* Define o tamanho da fonte */
+        color: #868484;                                   /* Cor do texto */
+        padding: 0%;                                        /* Remove espaçamento interno */
+        margin: 2px 3.3%;                                   /* Margens entre os itens */
+        border: 2px solid #868484;                        /* Borda de 2px ao redor dos itens */
+        border-radius: 25px;                                /* Bordas arredondadas */
+        display: flex;                                      /* Utilizando flexbox para layout */
+        align-items: center;                                /* Centraliza verticalmente o conteúdo */
+        justify-content: center;                            /* Centraliza horizontalmente o conteúdo */
+        flex: 1 0 auto;                                     /* Faz com que todos os itens tenham o mesmo tamanho */
+        min-height: 32px;                                   /* Altura mínima para os itens */
+        box-sizing: border-box;                             /* Inclui o padding e border no cálculo do tamanho total */
     }
 
-    ul.opcoes li input[type="radio"] {                  /* Estilos para o botão de escolha */
-        margin: 0px 3% 0px;                             /* Margens ao redor do botão */
-        transform: scale(1.7);                          /* Aumenta o tamanho do botão */
+    ul.opcoes li input[type="radio"] {                      /* Estilos para o botão de escolha */
+        margin: 0px 3% 0px;                                 /* Margens ao redor do botão */
+        transform: scale(1.7);                              /* Aumenta o tamanho do botão */
     }
 
     ul.opcoes li label {
-        margin-bottom: 0;                               /* Remove a margem inferior */
-        flex-grow: 1;                                   /* Faz com que o label ocupe todo o espaço disponível */
-        white-space: normal;                            /* Permite quebras de linha no texto */
-        overflow-wrap: break-word;                      /* Permite quebra de linha dentro de palavras longas */
-        text-align: left;                               /* Alinha o texto à esquerda */
-        line-height: 1.2;                               /* Ajusta o espaçamento entre as linhas */
+        margin-bottom: 0;                                   /* Remove a margem inferior */
+        flex-grow: 1;                                       /* Faz com que o label ocupe todo o espaço disponível */
+        white-space: normal;                                /* Permite quebras de linha no texto */
+        overflow-wrap: break-word;                          /* Permite quebra de linha dentro de palavras longas */
+        text-align: left;                                   /* Alinha o texto à esquerda */
+        line-height: 1.2;                                   /* Ajusta o espaçamento entre as linhas */
     }
-}
 
-/* Ajustes para o botão "Conhecer Áreas de Estudo" 
-aplicado somente no template 4 "tela_quatro.html"*/
-#position_botton_area {
-    width: 40%;                                         /* Ajusta o tamanho da imagem */
-    position: absolute;                                 /* Posicionamento absoluto para controle preciso */
-    top: 5%;                                           /* Ajusta o posicionamento vertical */
-    left: 55%;                                          /* Alinha horizontalmente ao centro */ 
-    cursor: pointer;                                    /* Adiciona um ponteiro para interação */
-}
-
-/* Ajustes para o botão "Conhecer Acoes Afirmativas" 
-aplicado somente no template 5 "tela_cinco.html"*/
-#position_botton_acoes {
-    width: 42%;                                         /* Ajusta o tamanho da imagem */
-    position: absolute;                                 /* Posicionamento absoluto para controle preciso */
-    top: 5%;                                           /* Ajusta o posicionamento vertical */
-    left: 10%;                                          /* Alinha horizontalmente ao centro */
-    cursor: pointer;                                    /* Adiciona um ponteiro para interação */
-}
-
-
-.botoes{
-    /* Inicialmente, defina a posição de partida */
-    animation: pulse 1.5s infinite; /* Adiciona animação */
-    transition: transform 0.2s ease-in-out; /* Suaviza a transformação */
-}
-/* Animação de pulsação */
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1); /* Tamanho original */
+    /* Ajustes para o botão "Conhecer Áreas de Estudo" 
+    aplicado somente no template 4 "tela4.html"*/
+    #position_botton_area {
+        width: 40%;                                         /* Ajusta o tamanho da imagem */
+        position: absolute;                                 /* Posicionamento absoluto para controle preciso */
+        top: 5%;                                            /* Ajusta o posicionamento vertical */
+        left: 55%;                                          /* Alinha horizontalmente ao centro */ 
+        cursor: pointer;                                    /* Adiciona um ponteiro para interação */
     }
-    50% {
-        transform: scale(1.1); /* Aumenta ligeiramente */
+
+    /* Ajustes para o botão "Conhecer Acoes Afirmativas" 
+    aplicado somente no template 5 "tela5.html"*/
+    #position_botton_acoes {
+        width: 42%;                                         /* Ajusta o tamanho da imagem */
+        position: absolute;                                 /* Posicionamento absoluto para controle preciso */
+        top: 5%;                                            /* Ajusta o posicionamento vertical */
+        left: 10%;                                          /* Alinha horizontalmente ao centro */
+        cursor: pointer;                                    /* Adiciona um ponteiro para interação */
     }
-}
 
 
-/* Animação slideIn */
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px); /* Começa fora da vista */
+    .botoes{
+        /* Inicialmente, defina a posição de partida */
+        animation: pulse 1.5s infinite;                     /* Adiciona animação */
+        transition: transform 0.2s ease-in-out;             /* Suaviza a transformação */
     }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* Volta para a posição original */
+    /* Animação de pulsação */
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1);                            /* Tamanho original */
+        }
+        50% {
+            transform: scale(1.1);                          /* Aumenta ligeiramente */
+        }
     }
+
+
+    /* Animação slideIn */
+    @keyframes slideIn {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);                    /* Começa fora da vista */
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);                       /* Volta para a posição original */
+        }
+    }
+
+    /* Aplicação de animação na classe content */
+    .content .opcoes li {
+        opacity: 0; /* Inicialmente oculto */
+        animation: slideIn 0.6s ease forwards;
+    }
+
+    .content .opcoes li {
+        /* Calcula automaticamente o delay com base na posição do item */
+        animation-delay: calc(0.2s * var(--order));
+    }
+
 }
 
-/* Aplicação de animação na classe content */
-.content .opcoes li {
-    opacity: 0; /* Inicialmente oculto */
-    animation: slideIn 0.6s ease forwards;
-}
-
-.content .opcoes li {
-    /* Calcula automaticamente o delay com base na posição do item */
-    animation-delay: calc(0.2s * var(--order));
-}

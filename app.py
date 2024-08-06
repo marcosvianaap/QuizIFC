@@ -79,7 +79,7 @@ def result():
         # Inicia a consulta para cursos recomendados
         cursos_recomendados_query = IFC.query
         cursos_recomendados_query = cursos_recomendados_query.filter(IFC.Modalidade.in_(situacao)) 
-        
+
         if regiao != 'Região':
             cursos_recomendados_query = cursos_recomendados_query.filter_by(Região=regiao)   
         if area != 'Área_Temática':

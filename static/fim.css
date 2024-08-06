@@ -84,98 +84,100 @@
         text-align: left;                               /* Alinha o texto à esquerda */
         line-height: 1.2;                               /* Ajusta o espaçamento entre as linhas */
     }
-}
 
-/* Ajustes para o botão "Reinicar Quiz" 
-aplicado somente no template fim "fim.html"*/
-#reinit {
-    width: 40%;                                         /* Ajusta o tamanho da imagem */
-    position: absolute;                                 /* Posicionamento absoluto para controle preciso */
-    top: 7%;                                           /* Ajusta o posicionamento vertical */
-    left: 55%;                                          /* Alinha horizontalmente ao centro */
-    cursor: pointer;                                    /* Adiciona um ponteiro para interação */
-}
-
-.curso-detalhe h4{ /* Ajusta o tamanho da fonte do curso */
-  display: inline;
-  font-size: large;
-}
-
-.curso-detalhe p{
-    margin: 0%;
-    text-align: left;
-}
-
-.curso-detalhe a{
-    margin-top: 50px;
-}
-.curso-detalhe a:hover{
-    color: #942294;
-}
-
-ul.conteudo {
-    width: 100%;                                    /* Largura total da tela */
-    max-width: 100%;                                /* Largura máxima para evitar overflow */
-    color: #fff;
-    list-style: none;                               /* Remove marcadores de lista */
-    margin: 0;
-    padding-left: 30px;
-}
-
-ul.conteudo li {
-    margin: 0;
-    padding-bottom: 3px;                           /* Espaço entre os itens de lista */
-}
-
-ul.conteudo li a{
-    text-decoration: none;
-}
-
-ul.conteudo li h5 {
-    margin: 0;
-    color: #fff;
-    cursor: pointer;
-    display: inline;  
-    border-bottom: 0.9px solid #fff;                /* Define a cor e espessura do sublinhado */
-    outline: none;                                  /* Remove a borda padrão de foco */
-}
-
-ul.conteudo li h5:hover{
-    color: #942294;
-    border-bottom: 1px solid #942294; 
-}
-
-
-.botoes {
-    animation: pulse 1.5s infinite;
-    transition: transform 0.2s ease-in-out;
-}
-
-/* Animação de pulsação */
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
+    /* Ajustes para o botão "Reinicar Quiz" 
+    aplicado somente no template fim "fim.html"*/
+    #reinit {
+        width: 40%;                                         /* Ajusta o tamanho da imagem */
+        position: absolute;                                 /* Posicionamento absoluto para controle preciso */
+        top: 7%;                                           /* Ajusta o posicionamento vertical */
+        left: 55%;                                          /* Alinha horizontalmente ao centro */
+        cursor: pointer;                                    /* Adiciona um ponteiro para interação */
     }
-    50% {
-        transform: scale(1.1);
-    }
-}
 
-/* Animação slideIn */
-@keyframes slideIn {
-    0% {
+    .curso-detalhe h4{ /* Ajusta o tamanho da fonte do curso */
+    display: inline;
+    font-size: large;
+    }
+
+    .curso-detalhe p{
+        margin: 0%;
+        text-align: left;
+    }
+
+    .curso-detalhe a{
+        margin-top: 50px;
+    }
+    .curso-detalhe a:hover{
+        color: #942294;
+    }
+
+    ul.conteudo {
+        width: 100%;                                    /* Largura total da tela */
+        max-width: 100%;                                /* Largura máxima para evitar overflow */
+        color: #fff;
+        list-style: none;                               /* Remove marcadores de lista */
+        margin: 0;
+        padding-left: 30px;
+    }
+
+    ul.conteudo li {
+        margin: 0;
+        padding-bottom: 3px;                           /* Espaço entre os itens de lista */
+    }
+
+    ul.conteudo li a{
+        text-decoration: none;
+    }
+
+    ul.conteudo li h5 {
+        margin: 0;
+        color: #fff;
+        cursor: pointer;
+        display: inline;  
+        border-bottom: 0.9px solid #fff;                /* Define a cor e espessura do sublinhado */
+        outline: none;                                  /* Remove a borda padrão de foco */
+    }
+
+    ul.conteudo li h5:hover{
+        color: #942294;
+        border-bottom: 1px solid #942294; 
+    }
+
+
+    .botoes {
+        animation: pulse 1.5s infinite;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    /* Animação de pulsação */
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+    }
+
+    /* Animação slideIn */
+    @keyframes slideIn {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Aplicação de animação na classe content */
+    .content .opcoes li {
         opacity: 0;
-        transform: translateY(20px);
+        animation: slideIn 0.6s ease forwards;
+        animation-delay: calc(0.2s * var(--order));
     }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+
 }
 
-/* Aplicação de animação na classe content */
-.content .opcoes li {
-    opacity: 0;
-    animation: slideIn 0.6s ease forwards;
-    animation-delay: calc(0.2s * var(--order));
-}
