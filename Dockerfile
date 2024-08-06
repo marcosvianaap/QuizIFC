@@ -10,4 +10,6 @@ RUN pip3 install --upgrade setuptools
 
 RUN pip3 install -r requirements.txt
 
-CMD [ "python3", "-m", "flask", "run", "--host=0.0.0.0" ]
+CMD ["gunicorn","app:app","-b","0.0.0.0","-w","4"]
+
+#CMD [ "python3", "-m", "flask", "run", "--host=0.0.0.0" ]
